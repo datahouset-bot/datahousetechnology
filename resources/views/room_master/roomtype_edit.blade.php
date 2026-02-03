@@ -1,0 +1,183 @@
+@extends('layouts.blank')
+
+@section('pagecontent')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ asset('general_assets/css/table.css') }}">
+
+
+ <div class="container-fluid px-3">
+    @if(session('message'))
+        <div class="alert alert-primary">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    <div class="card mt-3">
+        <div class="card-header">
+            Update Service Type
+        </div>
+        <div class="card-body">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-10">
+                    <form action="{{ route('roomtypes.update', $record2->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div>
+                            <label for="roomtype_name">Service Type Name</label>
+                            <input type="text" name="roomtype_name" class="form-control" placeholder="Room Type Name" value="{{ old('roomtype_name', $record2->roomtype_name) }}">
+                            <span class="text-danger">
+                                @error('roomtype_name')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div>
+                            <label for="package_id">Package</label>
+                            <select name="package_id" id="package_id" class="form-select">
+                                <option value="" selected disabled>Select Package</option>
+                                @foreach ($record as $package)
+                                    <option value="{{ $package->id }}" {{ $record2->package_id == $package->id ? 'selected' : '' }}>
+                                        {{ $package->package_name }} || {{ $package->plan_name }} || {{ $package->other_name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            <span class="text-danger">
+                                @error('package_id')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div>
+                            <label for="gst_id">GST / TAX %</label>
+                            <select name="gst_id" id="gst_id" class="form-select">
+                                <option value="" selected disabled>Select GST / Tax</option>
+                                @foreach ($record1 as $gst)
+                                    <option value="{{ $gst->id }}" {{ $record2->gst_id == $gst->id ? 'selected' : '' }}>
+                                        {{ $gst->taxname }} || {{ number_format($gst->igst, 2) }} || {{ number_format($gst->vat, 2) }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            <span class="text-danger">
+                                @error('gst_id')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div>
+                            <label for="room_tariff">Labour charge</label>
+                            <input type="text" name="room_tariff" class="form-control" placeholder="Room Charge" value="{{ old('room_tariff', $record2->room_tariff) }}">
+                            <span class="text-danger">
+                                @error('room_tariff')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                        <div>
+                            <label for="room_dis">Service Dis %</label>
+                            <input type="text" name="room_dis" class="form-control" placeholder="Room dis On % only" value="{{ old('room_dis', $record2->room_dis) }}">
+                            <span class="text-danger">
+                                @error('room_dis')
+                                    {{ $message }}
+                                @enderror
+                            </span>
+                        </div>
+                            <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Code   <input type="text" name ="room_type_af1"class="form-control" value={{ $record2->room_type_af1 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af1')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div>  
+                        <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate Code Single    <input type="text" name ="room_type_af2"class="form-control" value={{ $record2->room_type_af2 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af2')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div> 
+                    <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate Single    <input type="text" name ="room_type_af3"class="form-control" value={{ $record2->room_type_af3 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af3')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div> 
+                             <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate Code Double    <input type="text" name ="room_type_af4"class="form-control" value={{ $record2->room_type_af4 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af4')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div> 
+                      <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate Double    <input type="text" name ="room_type_af5"class="form-control" value={{ $record2->room_type_af5 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af5')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div> 
+                         <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate Code Tripale    <input type="text" name ="room_type_af6"class="form-control" value={{ $record2->room_type_af6 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af6')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div>  
+                     <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate  Tripale    <input type="text" name ="room_type_af7"class="form-control" value={{ $record2->room_type_af7 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af7')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div>  
+                          <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate Code Qued    <input type="text" name ="room_type_af8"class="form-control" value={{ $record2->room_type_af8 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af8')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div> 
+                   <div   style="{{ $componyinfo->componyinfo_af2 == 1 ? '' : 'display:none;' }}">
+
+                             Room Rate  Qued    <input type="text" name ="room_type_af9"class="form-control" value={{ $record2->room_type_af9 }}>
+                            <span class="text-danger"> 
+                              @error('room_type_af9')
+                              {{$message}}
+                                  
+                              @enderror
+                            </span> 
+                          </div> 
+                        <button type="submit" class="btn btn-primary btn-m my-2 float-end">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

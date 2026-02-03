@@ -1,0 +1,357 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ global_asset('/general_assets\css\table.css') }}">
+
+@extends('layouts.blank')
+{{-- @include('layouts.blank') --}}
+@section('pagecontent')
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jquery/master.js"></script>
+    <script src="//cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            let table = new DataTable('#remindtable');
+
+        });
+    </script>
+    <style>
+/* ===== PAGE BACKGROUND ===== */
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ===== CARD ===== */
+.card {
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== CARD HEADER ===== */
+.card-header {
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ===== MAIN BUTTON ===== */
+.btn-primary {
+    border-radius: 30px;
+    padding: 8px 22px;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(13,110,253,.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* ===== TABLE ===== */
+.table {
+    font-size: 14px;
+}
+
+.table thead th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+    color: #334155;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody tr {
+    transition: background .15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* ===== ACTION ICONS ===== */
+.table .fa {
+    font-size: 18px;
+    transition: transform .15s ease, opacity .15s ease;
+    opacity: .85;
+}
+
+.table .fa:hover {
+    transform: scale(1.25);
+    opacity: 1;
+}
+
+.fa-print { color: #0d6efd; }
+.fa-edit  { color: #0ea5e9; }
+.fa-trash { color: #ef4444; }
+
+/* ===== MODAL ===== */
+.modal-content {
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.2);
+}
+
+.modal-header {
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+/* ===== FORM ===== */
+label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 .15rem rgba(13,110,253,.25);
+}
+
+/* ===== ALERTS ===== */
+.alert {
+    border-radius: 10px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .card-header {
+        text-align: center;
+    }
+}
+</style>
+
+  
+  <div class="container ">
+    @if (session('message'))
+        <div class="alert alert-primary">
+            {{ session('message') }}
+        </div>
+    @endif
+    @if (session('error'))
+    <div class="alert alert-danger ">
+    {{ session('error') }}
+    </div>
+    @endif
+
+
+    <div class="card my-3">
+        <div class="card-header">
+            ADD  Advance Receipt        </div>
+        <div class="row my-2">
+            <div class="col-md-12 text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#myModal">
+                    Add New  Advance Receipt                </button>
+            </div>
+        </div>
+
+
+
+        <div class="container mt-5">
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Reciept</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="saveForm" action="{{url('/advace_receipt_store')}}" method="POST">
+                                @csrf
+                                <div class="col-md-12">
+                                    <label for="transaction_type">Voucher Name </label>
+                                    <input type="text" value={{$voucher_type->voucher_type_name}} class ="form-control" name="transaction_type" readonly>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="reciept_no">Reciept  No  </label>
+                                    <input type="text" value={{$new_bill_no}} class ="form-control" name="reciept_no" >
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="voucher_number">Voucher No  </label>
+                                    <input type="text" value={{$new_voucher_no}} class ="form-control" name="voucher_no" >
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="entry_date">Date </label>
+                                    <input type="text"  class ="form-control date" name="entry_date" @cannot('Change_Date&Time')readonly data-restrict="true"  @endcannot>
+
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="payment_mode_id">Payment Mode </label>
+                                    <select  id="" name="payment_mode_id"
+                                        class="form-control myitemgroup form-select">
+                                        <option value="" disabled selected>Select Paymnt Mode</option>
+                                        @foreach ($paymentmodes as $paymentmode)
+                                            <option value="{{ $paymentmode->id }}">{{ $paymentmode->account_name }}</option>
+                                        @endforeach
+                                    </select>
+                                    <span class="text-danger"> 
+                                        @error('payment_mode_id')
+                                        {{$message}}
+                                         @enderror
+                                    </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="account_id">Account</label>
+                                    <select  id="" name="account_id"
+                                        class="form-control myitemgroup form-select">
+                                        <option value="" disabled selected>Select Account</option>
+                                        @foreach ($account_names as $record)
+                                            <option value="{{ $record->account_id }}">{{ $record->account->account_name }}||{{ $record->checkin_date }}|| {{ $record->room_no }}||{{$record->guest_mobile}}</option>
+                                        @endforeach
+                                    </select>
+                                    <span class="text-danger"> 
+                                        @error('account_id')
+                                        {{$message}}
+                                         @enderror
+                                    </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="reciept_amount">Amount </label>
+                                    <input type="text" class ="form-control " placeholder=" Amount"
+                                        name="receipt_amount">
+                                        <span class="text-danger"> 
+                                            @error('receipt_amount')
+                                            {{$message}}
+                                             @enderror
+                                        </span>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="receipt_remark">Remark </label>
+                                    <input type="text" class ="form-control " placeholder=" Remark"                                       name="receipt_remark">
+                                    <span class="text-danger"> 
+                                        @error('receipt_remark')
+                                        {{$message}}
+                                         @enderror
+                                    </span>
+
+                                </div>
+
+
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button id="saveButton" type="submit" class="btn btn-primary">Save </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            $('#myModal').on('shown.bs.modal', function() {
+                $('#myModal').trigger('focus');
+            });
+            $(document).ready(function () {
+        $('#saveForm').on('submit', function () {
+            // Disable the submit button and show loading spinner
+            $('#saveButton')
+                .prop('disabled', true)
+                .html('<i class="fa fa-spinner fa-spin"></i> Please wait...');
+        });
+    });
+        </script>
+
+
+
+
+        {{-- data table start  --}}
+        <div class="card-body table-scrollable">
+            <table class="table table-striped" id="remindtable">
+                <thead>
+                    <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col"> Date  </th>
+                        <th scope="col"> Reciept No  </th>
+                        <th scope="col"> Payment Mode </th>
+                        <th scope="col"> Account Name </th>
+                        <th scope="col"> Amount</th>
+                        <th scope="col"> Remark</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @php
+                        $r1 = 0;
+                    @endphp
+                    @foreach ($ledgers as $ledger)
+                
+              <tr>
+       
+                <th scope="row">{{$r1=$r1+1}}</th>
+                <td>{{$ledger->entry_date}}</td>
+                <td>{{$ledger->reciept_no}}</td>
+                <td>{{$ledger->payment_mode_name}}</td>
+                <td>{{$ledger->account_name}}</td>
+                <td>{{$ledger->amount}}</td>
+                <td>{{$ledger->remark}}</td>
+
+
+                <td>
+                    {{-- {{ route('roomtypes.edit', $ledger['id']) }} --}}
+                      <a href="{{('advace_receipt_print/'.$ledger->voucher_no) }}" class="btn  btn-sm" ><i class="fa fa-print" style="font-size:20px;color:SlateBlue"></i></a>
+                  </td>
+                
+              <td>
+                {{-- {{ route('roomtypes.edit', $ledger['id']) }} --}}
+                  <a href="" class="btn  btn-sm" ><i class="fa fa-edit" style="font-size:20px;color:SlateBlue"></i></a>
+              </td>
+
+              <td><a href="{{('advace_receipt_delete/'.$ledger->voucher_no) }}"  class="btn  btn-sm" onclick="return confirm('Are you sure you want to delete this Reciept?')"><i class="fa fa-trash" style="font-size:20px;color:OrangeRed"></i></a></td>
+ 
+
+              </tr>
+              @endforeach
+             
+              
+            </tbody>
+          </table> 
+
+        </div>
+    </div>
+</div>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <script src="{{ global_asset('/general_assets\js\form.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+             
+            // Disable datepicker interaction if permission is restricted
+            $('[data-restrict="true"]').datepicker('destroy'); // Prevent calendar from appearing
+        });
+    </script>
+@endsection
