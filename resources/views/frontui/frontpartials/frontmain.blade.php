@@ -41,6 +41,126 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+        /* CTA SECTION */
+.busy-cta {
+    background: #ffffff;
+    padding: 50px 15px 30px;
+}
+
+.busy-cta h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 25px;
+}
+
+.btn-cta {
+    background: #e85c5c;
+    color: #fff;
+    padding: 14px 34px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 16px rgba(232, 92, 92, 0.3);
+}
+
+.btn-cta:hover {
+    background: #d84c4c;
+    color: #fff;
+}
+/* FAQ SECTION WRAPPER */
+.faq-wrapper {
+    background: #ffffff;
+    padding: 30px 15px 80px;
+}
+
+/* TITLE */
+.faq-title {
+    font-size: 34px;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 40px;
+}
+
+/* FAQ CARD */
+.faq-card {
+    max-width: 900px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* FAQ ITEM */
+.faq-item {
+    border: 1px solid #e6e9ee;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+/* QUESTION */
+.faq-question {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Plus / Minus icon */
+.faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+    content: "−";
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 10px 20px 16px;
+    background: #f9fbff;
+}
+/* VIEW ALL FAQ BUTTON */
+.view-faq-btn {
+    background: #0d6efd;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.view-faq-btn:hover {
+    background: #0b5ed7;
+    color: #fff;
+}
+
+
         /* ===== FULL WIDTH PRICING SECTION ===== */
         .pricing-section {
             width: 100%;
@@ -199,72 +319,7 @@
             }
         }
 
-        /* ===== TEAM SECTION ===== */
-        .team-section {
-            background: #f8fafc;
-        }
-
-        .team-card {
-            background: orange;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
-        }
-
-        .team-img {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        .team-img img {
-            width: 100%;
-            border-radius: 12px;
-        }
-
-        .team-social {
-            position: absolute;
-            inset: 0;
-            background: rgba(11, 29, 51, 0.85);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .team-img:hover .team-social {
-            opacity: 1;
-        }
-
-        .team-social a {
-            color: #fff;
-            background: #1e88e5;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s;
-        }
-
-        .team-social a:hover {
-            background: #1565c0;
-        }
-
-        .team-desc {
-            font-size: 14px;
-            color: rgb(38, 35, 35);
-            margin-top: 10px;
-        }
+     
 
         /* ===== CLIENTS ===== */
         .clients {
@@ -431,7 +486,7 @@
             background: #0b5fa5;
             color: #fff;
             padding: 10px 0;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         /* HEADER */
@@ -455,7 +510,7 @@
 
         .busy-logo small {
             display: block;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 500;
             color: #666;
         }
@@ -470,6 +525,74 @@
         .busy-nav .nav-link:hover {
             color: #0b5fa5 !important;
         }
+        
+/* ===== MEGA MENU FIX ===== */
+/* ================= BUSY STYLE FULL-WIDTH MEGA MENU ================= */
+
+.mega-dropdown {
+    position: static;
+}
+
+/* Full width dropdown */
+.mega-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #062f52; /* BUSY dark blue */
+    padding: 40px 60px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Column headings */
+.mega-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    text-transform: none;
+}
+
+/* Menu items */
+.mega-item {
+    display: block;
+    font-size: 14px;
+    color: #e6edf6;
+    padding: 6px 0;
+    text-decoration: none;
+}
+
+/* Bullet style */
+.mega-item::before {
+    content: "○";
+    color: #9cc7ff;
+    margin-right: 8px;
+}
+
+/* Hover */
+.mega-item:hover {
+    color: #ffffff;
+    padding-left: 5px;
+    transition: 0.2s ease;
+}
+
+/* Disable icons from earlier style */
+.mega-item i {
+    display: none;
+}
+
+/* Desktop hover */
+@media (min-width: 992px) {
+    .mega-dropdown:hover .mega-menu {
+        display: block;
+    }
+}
+
+
 
         /* ACTIONS */
         .busy-actions {
@@ -777,7 +900,7 @@
     <div class="busy-strip">
         <div class="container text-center">
             <strong>
-                {{ $softwarecompinfo->software_firm_name }} Business Software – Now on Cloud
+                {{ $softwarecompinfo->software_firm_name }} Business Software 
             </strong>
         </div>
     </div>
@@ -797,45 +920,144 @@
             </div>
 
             <!-- NAVIGATION -->
-            <nav class="busy-nav">
-                <ul class="nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                            Accounting Software
-                        </a>
-                        <div class="dropdown-menu">
-                            @forelse($itemgroup as $group)
-                                <a class="dropdown-item" href="#">
-                                    {{ $group->item_group }}
-                                </a>
-                            @empty
-                                <span class="dropdown-item text-muted">No Products</span>
-                            @endforelse
-                        </div>
-                    </li>
+         <nav class="busy-nav navbar navbar-expand-lg">
+    <ul class="navbar-nav">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                            GST
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">GST Billing</a>
-                            <a class="dropdown-item" href="#">GST Reports</a>
-                        </div>
-                    </li>
+        <!-- ACCOUNTING SOFTWARE MEGA DROPDOWN -->
+        <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                Accounting Software
+            </a>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                            Resources & Guides
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Blogs</a>
-                            <a class="dropdown-item" href="#">Videos</a>
-                            <a class="dropdown-item" href="#">Help</a>
+            <div class="dropdown-menu mega-menu">
+            
+                    <div class="row">
+
+                        <!-- PLANS -->
+                        <div class="col-md-4">
+                            <h6 class="mega-title">PRODUCTS & PRICING</h6>
+                            <a class="mega-item" href="#">BUSY</a>
+                            <a class="mega-item" href="#">SPEED PLUS</a>
+                            <a class="mega-item" href="#">MARG</a>
+                            <a class="mega-item" href="#">TALLY</a>
+                            <a class="mega-item" href="#">BILLING SOFTWARE</a>
+                            <a class="mega-item" href="#">CLOUD SERVICE</a>
                         </div>
-                    </li>
-                </ul>
-            </nav>
+
+                        <!-- FEATURES -->
+                        <div class="col-md-4">
+                            <h6 class="mega-title">FEATURES & FAQ</h6>
+                            <a class="mega-item" href="#">Accounting</a>
+                            <a class="mega-item" href="#">GST Accounting</a>
+                            <a class="mega-item" href="#">Financial Accounting</a>
+                            <a class="mega-item" href="#">Auto E-Way Bill</a>
+                            <a class="mega-item" href="#">Auto E-Invoice</a>
+                            <a class="mega-item" href="#">GSTR Reconciliation</a>
+                            <a class="mega-item" href="#">Inventory</a>
+                            <a class="mega-item" href="#">FAQs</a>
+                        </div>
+
+                        <!-- INDUSTRIES -->
+                        <div class="col-md-4">
+                            <h6 class="mega-title">INDUSTRY SOLUTIONS</h6>
+                            <a class="mega-item" href="#">E-commerce</a>
+                            <a class="mega-item" href="#">Retail</a>
+                            <a class="mega-item" href="#">Pharma</a>
+                            <a class="mega-item" href="#">FMCG</a>
+                            <a class="mega-item" href="#">Auto Parts</a>
+                            <a class="mega-item" href="#">F & B</a>
+                            <a class="mega-item" href="#">Chemical</a>
+                            <a class="mega-item" href="#">Computer Hardware</a>
+                        </div>
+
+                    </div>
+                
+            </div>
+        </li>
+
+        <!-- GST NORMAL DROPDOWN -->
+        <!-- GST MEGA DROPDOWN -->
+<li class="nav-item dropdown mega-dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+        GST
+    </a>
+
+    <div class="dropdown-menu mega-menu gst-mega">
+        <div class="row">
+
+            <!-- COLUMN 1 -->
+            <div class="col-md-4">
+                <h6 class="mega-title">ALL ABOUT GST</h6>
+
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Basics</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Schemes</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> E-Way Bill</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> Transitioning to GST</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> SAC Codes</a>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="col-md-4">
+                <h6 class="mega-title invisible">Hidden</h6>
+
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Returns</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> E-Invoice</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> Input Tax Credit</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Penalties & Appeals</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Rates</a>
+            </div>
+
+            <!-- COLUMN 3 -->
+            <div class="col-md-4">
+                <h6 class="mega-title invisible">Hidden</h6>
+
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Invoicing</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Payments & Appeals</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> Time, Place & Value of Supply</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> HSN Codes</a>
+                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> TDS</a>
+            </div>
+
+        </div>
+    </div>
+</li>
+
+        <!-- RESOURCES -->
+        <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                Resources & Guides
+            </a>
+             <div class="dropdown-menu mega-menu">
+           <div class="row">
+
+                        <!-- PLANS -->
+                        <div class="col-md-4">
+                            <h6 class="mega-title">RESOURCES</h6>
+                            <a class="mega-item" href="#">DOWNLOAD</a>
+                            <a class="mega-item" href="#">CASE STUDIES</a>
+                            <a class="mega-item" href="#">FAQ</a>
+                             <a class="mega-item" href="#">iNVOICE FORMATS</a>
+                            <a class="mega-item" href="#">TALLY</a>
+                            <a class="mega-item" href="#">BILLING SOFTWARE</a>
+                            <a class="mega-item" href="#">CLOUD SERVICE</a>
+                        </div>
+
+                        <!-- FEATURES -->
+                        <div class="col-md-4">
+                            <h6 class="mega-title">GUIDES</h6>
+                            <a class="mega-item" href="#">Accounting Guides</a>
+                            <a class="mega-item" href="#">Invoicing Guides</a>
+                            <a class="mega-item" href="#">Glossary</a>
+                            <a class="mega-item" href="#">Buisness Updates</a>
+                            <a class="mega-item" href="#">CAs in India</a>
+                        </div>
+                       
+                    </div></div>
+        </li>
+
+    </ul>
+</nav>
+
 
             <!-- RIGHT ACTION -->
             <div class="busy-actions">
@@ -845,7 +1067,7 @@
                     <a href="{{ route('home') }}" class="busy-login">Dashboard</a>
                 @endguest
 
-                <a href="{{ url('/contact') }}" class="btn busy-trial-btn">
+                <a href="{{ url('/freetrial') }}" class="btn busy-trial-btn">
                     Free Trial
                 </a>
             </div>
@@ -955,29 +1177,58 @@
                                 <strong>BOOK A DEMO</strong>
                             </h4>
 
-                            <form>
-                                <div class="form-group">
-                                    <label>Phone Number *</label>
-                                    <div class="d-flex">
-                                        <span class="country-code">+91</span>
-                                        <input type="text" class="form-control" placeholder="Phone Number">
-                                    </div>
-                                </div>
+                           <form action="https://dht.datahouseerp.com/addlead" method="POST">
 
-                                <div class="form-group">
-                                    <label>Email ID *</label>
-                                    <input type="email" class="form-control" placeholder="Email ID">
-                                </div>
+    <!-- REQUIRED HIDDEN FIELDS -->
+    <input type="hidden" name="lead_title" value="Website Lead">
+    <input type="hidden" name="lead_product" value="DataHouse ERP Demo">
+    <input type="hidden" name="lead_disc" value="Lead generated from external website demo form">
+    <input type="hidden" name="lead_executive" value="0">
 
-                                <div class="form-group">
-                                    <label>City *</label>
-                                    <input type="text" class="form-control" placeholder="City">
-                                </div>
+    <!-- VISIBLE FIELDS -->
+    <div class="form-group">
+        <label>Name *</label>
+        <input type="text"
+               name="lead_name"
+               class="form-control"
+               placeholder="Your Name"
+               required>
+    </div>
 
-                                <button type="submit" class="btn btn-danger btn-block demo-btn">
-                                    Book A Demo
-                                </button>
-                            </form>
+    <div class="form-group">
+        <label>Phone Number *</label>
+        <div class="d-flex">
+            <span class="country-code">+91</span>
+            <input type="text"
+                   name="lead_mobile"
+                   class="form-control"
+                   placeholder="Phone Number"
+                   required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Email ID</label>
+        <input type="email"
+               name="lead_email"
+               class="form-control"
+               placeholder="Email ID">
+    </div>
+
+    <div class="form-group">
+        <label>City</label>
+        <input type="text"
+               name="lead_city"
+               class="form-control"
+               placeholder="City">
+    </div>
+
+    <button type="submit" class="btn btn-danger btn-block demo-btn">
+        Book A Demo
+    </button>
+
+</form>
+
                         </div>
                     </div>
 
@@ -1132,198 +1383,98 @@
             </div>
         </section>
 
-        <!--Start recent work-->
+        <!-- CTA SECTION -->
+<section class="busy-cta">
+    <div class="container text-center">
+        <h2>Would You Like to Try {{ $softwarecompinfo->software_firm_name}}</h2>
+        <a href="{{url('/freetrial')}}" class="btn btn-cta">
+            GET FREE TRIAL <span>&raquo;</span>
+        </a>
+    </div>
+</section><section class="faq-wrapper">
+    <div class="container">
+        <h2 class="faq-title text-center">Frequently Asked Questions</h2>
 
+        <div class="faq-card mx-auto">
 
-
-        <section class="feature-section py-5">
-            <div class="container">
-                <div class="row align-items-center">
-
-                    {{-- WHY CHOOSE US --}}
-                    <div class="col-lg-6 mb-4 wow fadeInLeft">
-                        <div class="feature-card">
-                            <h3 class="section-title">
-                                Why Choose {{ $softwarecompinfo->software_firm_name }}?
-                            </h3>
-
-                            <p class="text-muted mb-4">
-                                {{ $softwarecompinfo->software_firm_name }} Hotel ERP is built to
-                                simplify hotel operations, improve efficiency, and deliver
-                                an exceptional guest experience through smart automation.
-                            </p>
-
-                            <ul class="feature-list">
-                                <li>
-                                    <i class="fa fa-check-circle"></i>
-                                    Comprehensive hotel management modules
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-circle"></i>
-                                    Clean & user-friendly interface
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-circle"></i>
-                                    Real-time reports & analytics
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-circle"></i>
-                                    Fully customizable workflows
-                                </li>
-                                <li>
-                                    <i class="fa fa-check-circle"></i>
-                                    Reliable support & regular updates
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {{-- TRUST / PERFORMANCE --}}
-                    <div class="col-lg-6 wow fadeInRight">
-                        <div class="feature-card">
-                            <h3 class="section-title">Trusted by Clients</h3>
-
-                            <div class="skill-item">
-                                <span>Easy To Use</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 80%">80%</div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <span>Responsive Across Devices</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 93%">93%</div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <span>System Reliability</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 99%">99%</div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <span>Reporting & Printing</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 86%">86%</div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <span>Customer Support</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 89%">89%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is {{ $softwarecompinfo->software_firm_name }} Online, and how does it help businesses manage their finances?
+                </button>
+                <div class="faq-answer">
+                    {{ $softwarecompinfo->software_firm_name }} Online helps businesses manage accounting, billing,
+                    GST compliance, and financial reporting securely from anywhere.
                 </div>
             </div>
-        </section>
 
-
-        <section class="team-section py-5">
-            <div class="container">
-
-                {{-- Section Title --}}
-                <div class="row mb-5">
-                    <div class="col-12 text-center">
-                        <h3 class="font-weight-bold text-primary">Meet Our Team</h3>
-                        <p class="text-muted">
-                            A dedicated team driving innovation and excellence at
-                            {{ $softwarecompinfo->software_firm_name }}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    {{-- Team Member --}}
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="team-card text-center">
-                            <div class="team-img">
-                                <img src="images/teams/1.png" alt="Hariom">
-                                <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <h5 class="mt-3 mb-1">Hariom</h5>
-                            <small class="text-danger font-weight-bold">Operations Manager</small>
-                            <p class="team-desc">
-                                Oversees daily operations and ensures smooth workflow across
-                                departments with a focus on efficiency and growth.
-                            </p>
-                        </div>
-                    </div>
-
-                    {{-- Team Member --}}
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="team-card text-center">
-                            <div class="team-img">
-                                <img src="images/teams/2.png" alt="Pankaj">
-                                <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-github"></i></a>
-                                </div>
-                            </div>
-                            <h5 class="mt-3 mb-1">Pankaj</h5>
-                            <small class="text-danger font-weight-bold">Full Stack Developer</small>
-                            <p class="team-desc">
-                                Builds scalable, secure web applications and leads
-                                backend architecture for ERP solutions.
-                            </p>
-                        </div>
-                    </div>
-
-                    {{-- Team Member --}}
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="team-card text-center">
-                            <div class="team-img">
-                                <img src="images/teams/3.png" alt="Reshma">
-                                <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                </div>
-                            </div>
-                            <h5 class="mt-3 mb-1">Reshma</h5>
-                            <small class="text-danger font-weight-bold">UI / UX Designer</small>
-                            <p class="team-desc">
-                                Designs intuitive interfaces and user experiences
-                                that align business goals with user needs.
-                            </p>
-                        </div>
-                    </div>
-
-                    {{-- Team Member --}}
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="team-card text-center">
-                            <div class="team-img">
-                                <img src="images/teams/4.png" alt="Sonali">
-                                <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <h5 class="mt-3 mb-1">Sonali</h5>
-                            <small class="text-danger font-weight-bold">Software Engineer</small>
-                            <p class="team-desc">
-                                Develops high-quality features with a focus on
-                                performance, security, and maintainability.
-                            </p>
-                        </div>
-                    </div>
-
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is {{ $softwarecompinfo->software_firm_name }} entirely cloud-based or does it offer offline access?
+                </button>
+                <div class="faq-answer">
+                    It supports cloud-based access with secure backups and also allows offline usage
+                    with data sync options.
                 </div>
             </div>
-        </section>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How does cloud accounting differ from traditional accounting software?
+                </button>
+                <div class="faq-answer">
+                    Cloud accounting allows real-time access, automatic updates, backups,
+                    and collaboration from multiple locations.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What features make online accounting software essential for modern businesses?
+                </button>
+                <div class="faq-answer">
+                    Remote accessibility, automatic backups, GST compliance,
+                    multi-user access, and secure cloud storage.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                   What is {{ $softwarecompinfo->software_firm_name }} Billing Software?
+                </button>
+                <div class="faq-answer">
+                   {{ $softwarecompinfo->software_firm_name }} billing software allows businesses to create, manage, and send invoices online , you can generate customizable invoices, apply 
+                   discounts,and send them directly to your customers via email or WhatsApp. This eliminates the need for manual billing, saving time and reducing errors.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can {{ $softwarecompinfo->software_firm_name }} accounting software be used across multiple devices and locations?
+                </button>
+                <div class="faq-answer">
+                   Yes, {{ $softwarecompinfo->software_firm_name }} Online allows you to access your data from any device anytime, making it ideal for businesses with multiple locations.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                   What makes {{ $softwarecompinfo->software_firm_name }} Accounting Software different from other solutions?
+                </button>
+                <div class="faq-answer">
+{{ $softwarecompinfo->software_firm_name }} Online offers India-specific features like GST compliance,
+ low bandwidth requirements, and 24/7 customer support, making it India's best cloud-based accounting software.
+                </div>
+            </div>
+  
+        </div>
+<div class="text-center mt-4">
+            <a href="#" class="btn view-faq-btn">View all FAQs</a>
+        </div>
+      
+    </div>
+</section>
+
+     <!-- ================= CLIENTS SECTION ================= -->
 
         <section class="clients py-5">
             <div class="container">
@@ -1357,7 +1508,7 @@
 
                     <div class="col-lg-8">
                         <h2 class="text-white font-weight-bold mb-3">
-                            Best Software for Hotel Business
+                            Best Software for Business
                         </h2>
                         <p class="text-light lead mb-4">
                             {{ $softwarecompinfo->software_firm_name }} Hotel ERP is a complete,
@@ -1590,6 +1741,19 @@
         `;
         });
     </script>
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                if (faq !== item) faq.classList.remove('active');
+            });
+
+            item.classList.toggle('active');
+        });
+    });
+</script>
 
 
 </body>

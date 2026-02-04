@@ -14,4 +14,9 @@ class LandingpageController extends Controller
         return view ('second_index', compact('itemgroup'));
 
     }
+    public function freetrial()
+    {
+        $itemgroup = itemgroup::where('head_group', '=', 'nav')->get();
+        return view('frontui.frontpartials.freetrial', compact('itemgroup'));
+    }
 }

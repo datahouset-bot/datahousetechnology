@@ -110,9 +110,13 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [LandingpageController::class, 'show_secondindexpage'])->name('second_index');
+Route::get('/freetrial', [LandingpageController::class, 'freetrial'])->name('freetrial');
 Route::get('/mantinace_mode', [App\Http\Controllers\MaintenancemodeController::class, 'index']);
 Route::post('/maintenancemode/update', [App\Http\Controllers\MaintenancemodeController::class, 'update'])->name('maintenancemode.update');
 
+Route::view('/browser', 'frontui.frontpartials.browser');
+Route::view('/youtube', 'frontui.frontpartials.youtube');
+Route::view('/features', 'frontui.frontpartials.features');
 
 // profile Route--------------------------------------------------
 //Route::get('/userprofilelist', [App\Http\Controllers\userprofileController::class, 'show'])->name('userprofilelist');
