@@ -41,6 +41,86 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+        /* ===== INFRA & SERVICES ===== */
+.infra-services {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.infra-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0b1d33;
+}
+
+.infra-subtitle {
+    max-width: 850px;
+    margin: 15px auto 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Card */
+.infra-card {
+    background: #ffffff;
+    border: 1px solid #e6edf6;
+    border-radius: 12px;
+    padding: 35px;
+    position: relative;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.infra-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+.infra-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 38px;
+    color: #4b3fa7;
+}
+
+/* Tag */
+.infra-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Title */
+.infra-card h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b1d33;
+    margin-bottom: 12px;
+}
+
+/* Text */
+.infra-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .infra-services {
+        padding: 70px 0;
+    }
+
+    .infra-title {
+        font-size: 28px;
+    }
+}
+
         /* CTA SECTION */
 .busy-cta {
     background: #ffffff;
@@ -368,264 +448,6 @@
         .enhanced-promo .btn-primary:hover {
             background: #1565c0;
         }
-
-        /* ================= FOOTER THEME ================= */
-        :root {
-            --footer-bg: #3f3f3f;
-            --footer-dark: #2f2f2f;
-            --footer-accent: #0b1d33;
-            --footer-text: #cfcfcf;
-        }
-
-        /* Top icon bar */
-        .footer-top {
-            background: var(--footer-bg);
-            padding: 50px 0;
-        }
-
-        .footer-top-box {
-            background: #4a4a4a;
-            border-radius: 6px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .footer-top-box i {
-            width: 55px;
-            height: 55px;
-            line-height: 55px;
-            background: var(--footer-accent);
-            color: #fff;
-            border-radius: 50%;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .footer-top-box h5 {
-            color: #fff;
-            margin-bottom: 5px;
-        }
-
-        .footer-top-box p {
-            color: #bdbdbd;
-            font-size: 14px;
-        }
-
-        /* Main footer */
-        .footer {
-            background: var(--footer-bg);
-            color: var(--footer-text);
-            padding: 60px 0;
-        }
-
-        .footer h4 span {
-            color: var(--footer-accent);
-        }
-
-        .footer a {
-            color: #bdbdbd;
-        }
-
-        .footer a:hover {
-            color: #fff;
-        }
-
-        /* Newsletter */
-        .newsletter input {
-            border-radius: 30px;
-            padding: 10px 20px;
-            border: none;
-            width: 70%;
-        }
-
-        .newsletter button {
-            border-radius: 30px;
-            padding: 10px 25px;
-            background: var(--footer-accent);
-            color: #fff;
-            border: none;
-        }
-
-        /* Footer links */
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links li i {
-            margin-right: 8px;
-            color: var(--footer-accent);
-        }
-
-        /* Bottom bar */
-        .footer_bottom {
-            background: var(--footer-dark);
-            padding: 15px 0;
-            color: #aaa;
-        }
-
-        .footer_social i {
-            color: #aaa;
-        }
-
-        .footer_social i:hover {
-            color: #fff;
-        }
-
-        #navbar {
-            display: inline;
-        }
-
-        .youtube-button {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        /* ===== BUSY HEADER STYLE ===== */
-
-        .busy-strip {
-            background: #0b5fa5;
-            color: #fff;
-            padding: 10px 0;
-            font-size: 20px;
-        }
-
-        /* HEADER */
-        .busy-header {
-            background: #ffffff;
-            border-bottom: 1px solid #eee;
-            padding: 18px 0;
-        }
-
-        .busy-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 700;
-            color: #0b1d33;
-        }
-
-        .busy-logo span {
-            line-height: 1.2;
-        }
-
-        .busy-logo small {
-            display: block;
-            font-size: 16px;
-            font-weight: 500;
-            color: #666;
-        }
-
-        /* NAV */
-        .busy-nav .nav-link {
-            font-weight: 600;
-            color: #333 !important;
-            padding: 10px 16px;
-        }
-
-        .busy-nav .nav-link:hover {
-            color: #0b5fa5 !important;
-        }
-        
-/* ===== MEGA MENU FIX ===== */
-/* ================= BUSY STYLE FULL-WIDTH MEGA MENU ================= */
-
-.mega-dropdown {
-    position: static;
-}
-
-/* Full width dropdown */
-.mega-menu {
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background: #062f52; /* BUSY dark blue */
-    padding: 40px 60px;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-/* Column headings */
-.mega-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 15px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    text-transform: none;
-}
-
-/* Menu items */
-.mega-item {
-    display: block;
-    font-size: 14px;
-    color: #e6edf6;
-    padding: 6px 0;
-    text-decoration: none;
-}
-
-/* Bullet style */
-.mega-item::before {
-    content: "○";
-    color: #9cc7ff;
-    margin-right: 8px;
-}
-
-/* Hover */
-.mega-item:hover {
-    color: #ffffff;
-    padding-left: 5px;
-    transition: 0.2s ease;
-}
-
-/* Disable icons from earlier style */
-.mega-item i {
-    display: none;
-}
-
-/* Desktop hover */
-@media (min-width: 992px) {
-    .mega-dropdown:hover .mega-menu {
-        display: block;
-    }
-}
-
-
-
-        /* ACTIONS */
-        .busy-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .busy-login {
-            font-weight: 600;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .busy-login:hover {
-            color: #0b5fa5;
-        }
-
-        /* FREE TRIAL BUTTON */
-        .busy-trial-btn {
-            background: #e85b5b;
-            color: #fff;
-            font-weight: 600;
-            padding: 10px 22px;
-            border-radius: 8px;
-            border: none;
-        }
-
-        .busy-trial-btn:hover {
-            background: #d84c4c;
-            color: #fff;
-        }
-
         /* ===== FEATURE SECTION ===== */
         .feature-section {
             background: #f4f7fb;
@@ -896,184 +718,8 @@
 </head>
 
 <body class="home">
-    {{-- ================= TOP BAR ================= --}}
-    <div class="busy-strip">
-        <div class="container text-center">
-            <strong>
-                {{ $softwarecompinfo->software_firm_name }} Business Software 
-            </strong>
-        </div>
-    </div>
-
-    {{-- ================= MIDDLE HEADER ================= --}}
-    <header class="busy-header">
-        <div class="container d-flex align-items-center justify-content-between">
-
-            <!-- LOGO -->
-            <div class="busy-logo">
-                <img src="{{ global_asset('front_assets/images/logo.png') }}" alt="Logo"
-                    onerror="this.style.display='none'">
-                <span>
-                    {{ $softwarecompinfo->software_firm_name ?? 'BUSY ERP' }}
-                    <small>Business Accounting Software</small>
-                </span>
-            </div>
-
-            <!-- NAVIGATION -->
-         <nav class="busy-nav navbar navbar-expand-lg">
-    <ul class="navbar-nav">
-
-        <!-- ACCOUNTING SOFTWARE MEGA DROPDOWN -->
-        <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                Accounting Software
-            </a>
-
-            <div class="dropdown-menu mega-menu">
-            
-                    <div class="row">
-
-                        <!-- PLANS -->
-                        <div class="col-md-4">
-                            <h6 class="mega-title">PRODUCTS & PRICING</h6>
-                            <a class="mega-item" href="#">BUSY</a>
-                            <a class="mega-item" href="#">SPEED PLUS</a>
-                            <a class="mega-item" href="#">MARG</a>
-                            <a class="mega-item" href="#">TALLY</a>
-                            <a class="mega-item" href="#">BILLING SOFTWARE</a>
-                            <a class="mega-item" href="#">CLOUD SERVICE</a>
-                        </div>
-
-                        <!-- FEATURES -->
-                        <div class="col-md-4">
-                            <h6 class="mega-title">FEATURES & FAQ</h6>
-                            <a class="mega-item" href="#">Accounting</a>
-                            <a class="mega-item" href="#">GST Accounting</a>
-                            <a class="mega-item" href="#">Financial Accounting</a>
-                            <a class="mega-item" href="#">Auto E-Way Bill</a>
-                            <a class="mega-item" href="#">Auto E-Invoice</a>
-                            <a class="mega-item" href="#">GSTR Reconciliation</a>
-                            <a class="mega-item" href="#">Inventory</a>
-                            <a class="mega-item" href="#">FAQs</a>
-                        </div>
-
-                        <!-- INDUSTRIES -->
-                        <div class="col-md-4">
-                            <h6 class="mega-title">INDUSTRY SOLUTIONS</h6>
-                            <a class="mega-item" href="#">E-commerce</a>
-                            <a class="mega-item" href="#">Retail</a>
-                            <a class="mega-item" href="#">Pharma</a>
-                            <a class="mega-item" href="#">FMCG</a>
-                            <a class="mega-item" href="#">Auto Parts</a>
-                            <a class="mega-item" href="#">F & B</a>
-                            <a class="mega-item" href="#">Chemical</a>
-                            <a class="mega-item" href="#">Computer Hardware</a>
-                        </div>
-
-                    </div>
-                
-            </div>
-        </li>
-
-        <!-- GST NORMAL DROPDOWN -->
-        <!-- GST MEGA DROPDOWN -->
-<li class="nav-item dropdown mega-dropdown">
-    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-        GST
-    </a>
-
-    <div class="dropdown-menu mega-menu gst-mega">
-        <div class="row">
-
-            <!-- COLUMN 1 -->
-            <div class="col-md-4">
-                <h6 class="mega-title">ALL ABOUT GST</h6>
-
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Basics</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Schemes</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> E-Way Bill</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> Transitioning to GST</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> SAC Codes</a>
-            </div>
-
-            <!-- COLUMN 2 -->
-            <div class="col-md-4">
-                <h6 class="mega-title invisible">Hidden</h6>
-
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Returns</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> E-Invoice</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> Input Tax Credit</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Penalties & Appeals</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Rates</a>
-            </div>
-
-            <!-- COLUMN 3 -->
-            <div class="col-md-4">
-                <h6 class="mega-title invisible">Hidden</h6>
-
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Invoicing</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> GST Payments & Appeals</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> Time, Place & Value of Supply</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> HSN Codes</a>
-                <a class="mega-item" href="#"><i class="fa fa-check-circle"></i> TDS</a>
-            </div>
-
-        </div>
-    </div>
-</li>
-
-        <!-- RESOURCES -->
-        <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                Resources & Guides
-            </a>
-             <div class="dropdown-menu mega-menu">
-           <div class="row">
-
-                        <!-- PLANS -->
-                        <div class="col-md-4">
-                            <h6 class="mega-title">RESOURCES</h6>
-                            <a class="mega-item" href="#">DOWNLOAD</a>
-                            <a class="mega-item" href="#">CASE STUDIES</a>
-                            <a class="mega-item" href="#">FAQ</a>
-                             <a class="mega-item" href="#">iNVOICE FORMATS</a>
-                            <a class="mega-item" href="#">TALLY</a>
-                            <a class="mega-item" href="#">BILLING SOFTWARE</a>
-                            <a class="mega-item" href="#">CLOUD SERVICE</a>
-                        </div>
-
-                        <!-- FEATURES -->
-                        <div class="col-md-4">
-                            <h6 class="mega-title">GUIDES</h6>
-                            <a class="mega-item" href="#">Accounting Guides</a>
-                            <a class="mega-item" href="#">Invoicing Guides</a>
-                            <a class="mega-item" href="#">Glossary</a>
-                            <a class="mega-item" href="#">Buisness Updates</a>
-                            <a class="mega-item" href="#">CAs in India</a>
-                        </div>
-                       
-                    </div></div>
-        </li>
-
-    </ul>
-</nav>
-
-
-            <!-- RIGHT ACTION -->
-            <div class="busy-actions">
-                @guest
-                    <a href="{{ route('login') }}" class="busy-login">Login</a>
-                @else
-                    <a href="{{ route('home') }}" class="busy-login">Dashboard</a>
-                @endguest
-
-                <a href="{{ url('/freetrial') }}" class="btn busy-trial-btn">
-                    Free Trial
-                </a>
-            </div>
-
-        </div>
-    </header>
+    {{-- ================= Header ========== --}}
+    @include('admin.newheaderformainpage')
     <!--End Header-->
 
     {{-- ================= HERO SECTION ================= --}}
@@ -1176,10 +822,11 @@
                             <h4 class="text-center mb-4">
                                 <strong>BOOK A DEMO</strong>
                             </h4>
-
-                           <form action="https://dht.datahouseerp.com/addlead" method="POST">
+<form action="https://dht.datahouseerp.com/addlead" method="POST">
 
     <!-- REQUIRED HIDDEN FIELDS -->
+    <input type="hidden" name="firm_id" value="DATA0001">
+
     <input type="hidden" name="lead_title" value="Website Lead">
     <input type="hidden" name="lead_product" value="DataHouse ERP Demo">
     <input type="hidden" name="lead_disc" value="Lead generated from external website demo form">
@@ -1383,7 +1030,120 @@
             </div>
         </section>
 
-        <!-- CTA SECTION -->
+    
+<!-- ================= INFRA & SERVICES SECTION ================= -->
+<section class="infra-services">
+    <div class="container">
+
+        <!-- Title -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="infra-title">
+                    Our Infra and Services For Optimize<br>
+                    Website Hosting
+                </h2>
+                <p class="infra-subtitle">
+                    Uniquely repurpose strategic core competencies with progressive content.
+                    Assertively transition ethical imperatives and collaborative manufactured products.
+                </p>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="row">
+
+            <!-- Card 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="infra-card">
+                    <div class="infra-icon">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <small class="infra-tag">EASY & FIRST</small>
+                    <h4>Website Hosting</h4>
+                    <p>
+                        Launch your online presence with easy and first-time hosting.
+                        Fast setup, user-friendly dashboard and beginner-friendly tools.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="infra-card">
+                    <div class="infra-icon">
+                        <i class="fa fa-cloud"></i>
+                    </div>
+                    <small class="infra-tag">SUITABLE FOR ALL USERS</small>
+                    <h4>Managed Host</h4>
+                    <p>
+                        Fully managed hosting designed for all users.
+                        Hassle-free, optimized, secure and performance-driven hosting experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 mb-4">
+                <div class="infra-card">
+                    <div class="infra-icon">
+                        <i class="fa fa-headphones"></i>
+                    </div>
+                    <small class="infra-tag">COMMITMENT TO</small>
+                    <h4>Dedicated Support</h4>
+                    <p>
+                        Our expert support team is always available to assist you.
+                        Reliable customer service that drives long-term success.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 mb-4">
+                <div class="infra-card">
+                    <div class="infra-icon">
+                        <i class="fa fa-exchange"></i>
+                    </div>
+                    <small class="infra-tag">EASY & SMOOTH</small>
+                    <h4>Server Migration</h4>
+                    <p>
+                        Move your server with zero downtime.
+                        Smooth migration with careful planning and secure execution.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+     <!-- ================= CLIENTS SECTION ================= -->
+
+        <section class="clients py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h3 class="font-weight-bold text-primary">Our Trusted Clients</h3>
+                        <p class="text-muted">
+                            Companies that rely on {{ $softwarecompinfo->software_firm_name }} ERP
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+
+                    @for ($i = 1; $i <= 4; $i++)
+                        <div class="col-sm-6 col-md-3 mb-4">
+                            <div class="client-card text-center">
+                                <img src="images/clients/{{ $i }}.png" class="img-fluid"
+                                    alt="Client {{ $i }}">
+                            </div>
+                        </div>
+                    @endfor
+
+                </div>
+            </div>
+        </section>
+    <!-- CTA SECTION -->
 <section class="busy-cta">
     <div class="container text-center">
         <h2>Would You Like to Try {{ $softwarecompinfo->software_firm_name}}</h2>
@@ -1473,35 +1233,6 @@
       
     </div>
 </section>
-
-     <!-- ================= CLIENTS SECTION ================= -->
-
-        <section class="clients py-5">
-            <div class="container">
-                <div class="row mb-4">
-                    <div class="col-12 text-center">
-                        <h3 class="font-weight-bold text-primary">Our Trusted Clients</h3>
-                        <p class="text-muted">
-                            Companies that rely on {{ $softwarecompinfo->software_firm_name }} ERP
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-
-                    @for ($i = 1; $i <= 4; $i++)
-                        <div class="col-sm-6 col-md-3 mb-4">
-                            <div class="client-card text-center">
-                                <img src="images/clients/{{ $i }}.png" class="img-fluid"
-                                    alt="Client {{ $i }}">
-                            </div>
-                        </div>
-                    @endfor
-
-                </div>
-            </div>
-        </section>
-
         <section class="promo_box enhanced-promo wow fadeInUp" data-wow-offset="80">
             <div class="container">
                 <div class="row align-items-center">
@@ -1528,133 +1259,9 @@
             </div>
         </section>
 
-
+<section>
+    @include('admin.partials.footerformainpage')
     </section><!--end wrapper-->
-
-    {{-- ================= FOOTER ICON STRIP ================= --}}
-    <div class="footer-top">
-        <div class="container">
-            <div class="row text-center">
-
-                <div class="col-md-3">
-                    <div class="footer-top-box">
-                        <i class="fa fa-map-marker"></i>
-                        <h5>Address</h5>
-                        <p>
-                            {{ $softwarecompinfo->software_address1 }}
-                            {{ $softwarecompinfo->software_city }}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="footer-top-box">
-                        <i class="fa fa-envelope"></i>
-                        <h5>Mail Us</h5>
-                        <p>{{ $softwarecompinfo->software_email }}</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="footer-top-box">
-                        <i class="fa fa-phone"></i>
-                        <h5>Telephone</h5>
-                        <p>{{ $softwarecompinfo->software_mobile }}</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="footer-top-box">
-                        <i class="fa fa-globe"></i>
-                        <h5>{{ request()->getHost() }}</h5>
-                        <p>{{ $softwarecompinfo->software_mobile }}</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    {{-- ================= MAIN FOOTER ================= --}}
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-
-                {{-- Newsletter --}}
-                <div class="col-md-3">
-                    <h4><span>Newsletter</span></h4>
-
-                    <p>Welcome to {{ $softwarecompinfo->software_firm_name }} ERP, where we revolutionize hotel
-                        management with our cutting-edge Hotel ERP system. At
-                        {{ $softwarecompinfo->software_firm_name }}, we understand the complexities and challenges
-                        that come with running a successful hotel. That’s why we’ve developed a comprehensive
-                        solution designed to streamline operations, enhance guest experiences, and maximize
-                        efficiency.</p>
-                    <div class="newsletter">
-                        <input type="email" placeholder="Enter your email">
-                        <button>SignUp</button>
-                    </div>
-                </div>
-
-                {{-- Customer Service --}}
-                <div class="col-md-3">
-                    <h4><span>Customer Service</span></h4>
-                    <ul class="footer-links list-unstyled">
-                        <li><i class="fa fa-angle-right"></i> Contact Us</li>
-                        <li><i class="fa fa-angle-right"></i> Working History</li>
-                        <li><i class="fa fa-angle-right"></i> Testimonials</li>
-                        <li><i class="fa fa-angle-right"></i> My Account</li>
-                    </ul>
-                </div>
-
-                {{-- Information --}}
-                <div class="col-md-3">
-                    <h4><span>Information</span></h4>
-                    <ul class="footer-links list-unstyled">
-                        <li><i class="fa fa-angle-right"></i> About Us</li>
-                        <li><i class="fa fa-angle-right"></i> Privacy Policy</li>
-                        <li><i class="fa fa-angle-right"></i> Terms & Conditions</li>
-                        <li><i class="fa fa-angle-right"></i> FAQ</li>
-                    </ul>
-                </div>
-
-                {{-- Extras --}}
-                <div class="col-md-3">
-                    <h4><span>Extras</span></h4>
-                    <ul class="footer-links list-unstyled">
-                        <li><i class="fa fa-angle-right"></i> Other Details</li>
-                        <li><i class="fa fa-angle-right"></i> Work</li>
-                        <li><i class="fa fa-angle-right"></i> Products</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-    {{-- ================= FOOTER BOTTOM ================= --}}
-    <section class="footer_bottom">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-sm-6">
-                    © {{ date('Y') }}
-                    {{ $softwarecompinfo->software_firm_name }} ERP.
-                    All rights reserved.
-                </div>
-
-                <div class="col-sm-6 text-right">
-                    <div class="footer_social">
-                        <a href="#"><i class="fa fa-facebook mx-2"></i></a>
-                        <a href="#"><i class="fa fa-twitter mx-2"></i></a>
-                        <a href="#"><i class="fa fa-linkedin mx-2"></i></a>
-                        <a href="#"><i class="fa fa-youtube mx-2"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <script type="text/javascript" src="{{ global_asset('/front_assets/js/jquery-1.10.2.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/bootstrap.min.js') }}"></script>

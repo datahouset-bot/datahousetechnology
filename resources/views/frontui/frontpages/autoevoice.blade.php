@@ -41,71 +41,188 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-     /* ===== INSTALLATION STEPS (IMAGE STYLE) ===== */
-.installation-section {
-    background: #ffffff;
-    padding: 60px 15px 40px;
+        /* ===== FINANCIAL ACCOUNTING SECTION ===== *//* ===== FINANCIAL PROCESS (IMAGE MATCH) ===== */
+
+.finance-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #003366;
 }
 
-.installation-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.installation-title {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
-    color: #0b5fa5;
-    margin-bottom: 10px;
-}
-
-.installation-subtitle {
-    text-align: center;
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* BUTTONS */
-.installation-actions {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.installation-actions a {
-    margin: 6px;
-    font-weight: 600;
-}
-
-/* STEPS */
-.installation-steps {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.installation-step {
-    margin-bottom: 18px;
-}
-
-.installation-step h6 {
+.finance-subtitle {
     font-size: 14px;
+    color: #666;
+    max-width: 900px;
+    margin: 10px auto 0;
+}
+
+.finance-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.finance-icon-box {
+    width: 34px;
+    height: 34px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.finance-link {
+    font-size: 15px;
     font-weight: 600;
-    color: #0b5fa5;
-    margin-bottom: 4px;
+    color: #0056b3;
+    text-decoration: none;
 }
 
-.installation-step p {
+.finance-link:hover {
+    text-decoration: underline;
+}
+
+.finance-row p {
     font-size: 13px;
-    color: #555;
-    margin: 0;
-    line-height: 1.6;
+    color: #666;
+    margin: 4px 0 0;
+    line-height: 1.5;
+}
+/* ===== OPTIMIZE FINANCE (ICON STYLE) ===== */
+
+.optimize-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #003366;
 }
 
-/* VIDEO */
-.installation-video {
-    text-align: center;
-    margin-top: 35px;
+.optimize-block {
+    padding: 70px 0;
+}
+
+.bg-soft {
+    background: #fdeff2;
+}
+
+.optimize-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* ICON LOOK (replaces illustration) */
+.optimize-icon {
+    font-size: 120px;
+    color: #0b5fa5;
+}
+
+.optimize-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.optimize-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.optimize-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e85b5b;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.optimize-btn {
+    background: #e85b5b;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.optimize-btn:hover {
+    background: #d84c4c;
+    color: #fff;
+}
+
+
+        /* ===== BUSY TRANSFORMATION SECTION ===== */
+.busy-transform {
+    background: #ffffff;
+    padding: 80px 15px;
+}
+
+.busy-transform-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b1d33;
+}
+
+.busy-transform-title span {
+    color: #0b5fa5;
+}
+
+.busy-transform-subtitle {
+    max-width: 850px;
+    margin: 10px auto 50px;
+    font-size: 15px;
+    color: #666;
+}
+
+/* Feature item */
+.transform-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.transform-icon {
+    width: 52px;
+    height: 52px;
+    background: #fdecee;
+    color: #e85b5b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.transform-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b1d33;
+    margin-bottom: 6px;
+}
+
+.transform-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .busy-transform {
+        padding: 60px 15px;
+    }
+
+    .busy-transform-title {
+        font-size: 26px;
+    }
 }
 
 /* FAQ SECTION WRAPPER */
@@ -198,29 +315,6 @@
 }
 
     
-        #navbar {
-            display: inline;
-        }
-
-        .youtube-button {
-            text-align: center;
-            margin: 20px 0;
-        }
-        /* ==========================corousel main part================================ */
-      
-        /* ===== FOOTER ===== */
-        .footer {
-            background: #2f2f2f;
-            color: #ccc;
-            padding: 60px 0;
-        }
-
-        .footer_bottom {
-            background: #1f1f1f;
-            color: #aaa;
-            padding: 15px 0;
-        }
-
         /* ===== NEW DEMO FORM STYLE (MATCH IMAGE) ===== */
 
 .demo-card-new {
@@ -287,8 +381,11 @@
     </style>
 </head>
 
-<body class="home">
-    @include('admin.newheaderformainpage')
+<body class="home"> 
+
+         @include('admin.newheaderformainpage')
+    <!--End Header-->
+
     {{-- ================= HERO SECTION ================= --}}
 
 
@@ -363,24 +460,18 @@
                     <!-- LEFT CONTENT -->
                     <div class="col-lg-7">
                         <h1 class="busy-title">
-                            {{ $softwarecompinfo->software_firm_name }} Online –
-                            <br>
-                            <span>Run Your Business Anytime, Anywhere</span>
+                           Automated E-invoice Software for Easy Compliance–
+                          
                         </h1>
 
                         <p class="busy-subtitle">
-                            {{ $softwarecompinfo->software_firm_name }} is a cloud-ready
-                            business software suite designed for Indian SMEs.
-                            Manage accounting, billing, inventory, GST and operations
-                            securely from anywhere — no IT expertise required.
+                          Did you know? Reducing manual errors is now easier than ever with BUSY, 
+                          a user-friendly software that automates the overall process saving you 
+                          time and money. What’s the wait for? Join the family of 360000+ customers
+                           in India who trust BUSY.
                         </p>
 
-                        <ul class="busy-points">
-                            <li><i class="fa fa-check-circle"></i> Cloud & GST Ready</li>
-                            <li><i class="fa fa-check-circle"></i> Secure Remote Access</li>
-                            <li><i class="fa fa-check-circle"></i> Multi-Business Support</li>
-                            <li><i class="fa fa-check-circle"></i> Trusted by 1000+ Businesses</li>
-                        </ul>
+                       
                     </div>
 
                     <!-- RIGHT DEMO CARD -->
@@ -431,129 +522,262 @@
 
                 </div>
             </div>
-        </section>
+        </section><!-- ================= FINANCIAL ACCOUNTING (IMAGE MATCH) ================= -->
+<section class="financial-process py-5 bg-white">
+    <div class="container">
 
-        <!-- ================= SOFTWARE SETUP & INSTALLATION ================= -->
-<section class="installation-section">
-    <div class="installation-container">
-
-        <h3 class="installation-title">
-            Software Setup & Installation
-        </h3>
-        <p class="installation-subtitle">
-            {{ $softwarecompinfo->software_firm_name }}
-        </p>
-
-        <!-- ACTION BUTTONS -->
-        <div class="installation-actions">
-            <a href="https://drive.google.com/file/d/1UUPmKUF65G6aYCW970x4yL5I-DyWkwOA/view"
-               class="btn btn-primary">
-                <i class="fa fa-download"></i> Download Software
-            </a>
-
-            <a href="#" class="btn btn-secondary">
-                <i class="fa fa-database"></i> Download Demo Data
-            </a>
-
-           <a href="{{ url('/browser') }}"
-               class="btn btn-success">
-                <i class="fa fa-desktop"></i> Browser & Screen
-            </a>
-
-            <a href="{{ url('/features') }}"
-               class="btn btn-warning">
-                <i class="fa fa-list"></i> Features List
-            </a>
-
-            <a href="{{ url('/youtube') }}"
-               class="btn btn-info">
-                <i class="fa fa-video-camera"></i> Demo Video
-            </a>
+        <!-- Heading -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="finance-title">
+                    How {{ $softwarecompinfo->software_firm_name }} Streamlines the Financial Accounting Process
+                </h2>
+                <p class="finance-subtitle">
+                    With meticulous transaction tracking, rapid reporting, and insightful analysis,
+                    simplify core financial accounting. Here’s how
+                    {{ $softwarecompinfo->software_firm_name }} streamlines the financial accounting process:
+                </p>
+            </div>
         </div>
 
-        <!-- STEPS (IMAGE STYLE) -->
-        <div class="installation-steps">
+        <!-- LIST -->
+        <div class="row justify-content-center">
+            <div class="col-md-10">
 
-            <div class="installation-step">
-                <h6>Step 1: फ़ाइलें डाउनलोड करें (Download Files)</h6>
-                <p>
-                    ऊपर दिए गए बटन पर क्लिक करके सॉफ्टवेयर पैकेज और डेमो डेटा डाउनलोड करें।
-                </p>
+                <!-- ITEM -->
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Complete Books of Accounting with Financial Software for Small Business
+                        </a>
+                        <p>
+                            Access final accounts, inventory reports, ledgers, tax reports, trial balance and
+                            more with {{ $softwarecompinfo->software_firm_name }}.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Analyse Sales & Purchases
+                        </a>
+                        <p>
+                            Get an in-depth analysis of receivables, expenses, sales and segment-wise reports
+                            by item, group or party.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-bank"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Bank Reconciliation with Software Financial Accounting
+                        </a>
+                        <p>
+                            Fetch financial transactions securely and reconcile your accounts with bank
+                            statements effortlessly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-exchange"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Ledger Reconciliation Made Easy
+                        </a>
+                        <p>
+                            Identify discrepancies, review reconciliations and avoid duplication of entries
+                            with ease.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-file-text-o"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            GST Compliant Invoicing for Accurate Financial Reporting
+                        </a>
+                        <p>
+                            Customise invoices with logo and formats of your choice and generate branded GST invoices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Multi-Currency Support for Global Transactions
+                        </a>
+                        <p>
+                            Maintain accounts in more than one currency and track export and import
+                            transactions effortlessly.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="installation-step">
-                <h6>Step 2: ज़िप फ़ाइल निकालें (Extract the ZIP)</h6>
-                <p>
-                    ज़िप फ़ाइल को अपनी पसंदीदा डायरेक्टरी में अनज़िप करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 3: Provider इंस्टॉल करें (Install Provider)</h6>
-                <p>
-                    सॉफ्टवेयर की डायरेक्टरी में आवश्यक provider इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 4: Support Files इंस्टॉल करें</h6>
-                <p>
-                    सभी आवश्यक समर्थन फ़ाइलें इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 5: Crystal Reports इंस्टॉल करें</h6>
-                <p>
-                    Key दर्ज करें: <strong>AVS50-81SG00S-G61002U</strong> ।  
-                    Restart पूछे तो <strong>No</strong> करें और अंत में
-                    <strong>Register Later</strong> चुनें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 6: Company बनाएँ या Demo Data Import करें</h6>
-                <p>
-                    Demo data को <strong>Speed Plus</strong> folder में paste करें
-                    और replace पूछे तो <strong>Yes</strong> करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <p>
-                    समस्या आने पर कॉल करें:
-                    <strong>7999663696</strong>
-                    या <a href="{{ url('todo_by_customer') }}">Instant Support</a>
-                </p>
-            </div>
-
         </div>
-
-       <!-- VIDEO -->
-<div class="installation-video">
-    <h3 class="text-primary mb-3">Installation Video Tutorial</h3>
-
-    <div class="ratio ratio-16x9 mb-3">
-        <iframe
-            src="https://www.youtube.com/embed/rSjeR3LHQUY"
-            title="Installation Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <a href="https://www.youtube.com/watch?v=rSjeR3LHQUY"
-       target="_blank"
-       class="btn btn-primary">
-        <i class="fa fa-youtube-play"></i> Watch on YouTube
-    </a>
-</div>
 
     </div>
 </section>
+<!-- ================= GST INVOICING & REPORTING (ICON VERSION) ================= --><!-- ================= OPTIMIZE FINANCIAL OPERATIONS (ICON VERSION) ================= -->
+<section class="optimize-finance">
+
+    <!-- SECTION TITLE -->
+    <div class="container text-center mb-5">
+   <h2 class="optimize-title">
+    Smart Invoicing Made Easy With
+    {{ $softwarecompinfo->software_firm_name }} Auto E-Invoice Software
+</h2>
 
 
-        
+    </div>
+
+    <!-- BLOCK 1 -->
+ <div class="optimize-block bg-soft">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- ICON -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="optimize-icon">
+                    <i class="fa fa-files-o"></i>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-md-6">
+                <h4 class="optimize-heading">Multiple E-Invoice Generation</h4>
+                <ul class="optimize-list">
+                    <li>Generate e-invoices for multiple vouchers</li>
+                    <li>Filter vouchers according to invoice type</li>
+                    <li>Eliminates duplicate errors</li>
+                </ul>
+                <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
+                    Try Busy for Free
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- BLOCK 2 --><div class="optimize-block">
+    <div class="container">
+        <div class="row align-items-center flex-md-row-reverse">
+
+            <!-- ICON -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="optimize-icon">
+                    <i class="fa fa-check-circle-o"></i>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-md-6">
+                <h4 class="optimize-heading">
+                    Data Validation and Error Checking in Best E-Invoicing Software
+                </h4>
+                <ul class="optimize-list">
+                    <li>Ensure 100% GST compliance & legal accuracy</li>
+                    <li>Benefit from automated data validation</li>
+                    <li>Generate fast & accurate e-invoices</li>
+                    <li>Avoid penalties & maintain clean records</li>
+                </ul>
+                <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
+                    Try Busy for Free
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <!-- BLOCK 3 --><div class="optimize-block bg-soft">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- ICON -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="optimize-icon">
+                    <i class="fa fa-magic"></i>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-md-6">
+                <h4 class="optimize-heading">
+                    Auto Population in Sales Invoice with E-Invoicing Software
+                </h4>
+                <ul class="optimize-list">
+                    <li>Automate e-invoice generation</li>
+                    <li>Update sales records effortlessly</li>
+                    <li>Ensure accurate, up-to-date records & seamless compliance</li>
+                </ul>
+                <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
+                    Try Busy for Free
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- BLOCK 4 -->
+  <div class="optimize-block">
+    <div class="container">
+        <div class="row align-items-center flex-md-row-reverse">
+
+            <!-- ICON -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="optimize-icon">
+                    <i class="fa fa-qrcode"></i>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-md-6">
+                <h4 class="optimize-heading">
+                    QR Code Generation in Electronic Invoicing Software
+                </h4>
+                <ul class="optimize-list">
+                    <li>Verify e-invoice authenticity effortlessly</li>
+                    <li>Generate & print QR codes during a one-time setup</li>
+                    <li>QR codes are automatically added to sales invoices</li>
+                </ul>
+                <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
+                    Try Busy for Free
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+
         <!-- CTA SECTION -->
 
 </section><section class="faq-wrapper">
@@ -638,9 +862,8 @@
       
     </div>
 </section>
-
-
 @include('admin.partials.footerformainpage')
+
     <script type="text/javascript" src="{{ global_asset('/front_assets/js/jquery-1.10.2.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/jquery.easing.1.3.js') }}"></script>

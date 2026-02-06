@@ -41,71 +41,126 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-     /* ===== INSTALLATION STEPS (IMAGE STYLE) ===== */
-.installation-section {
-    background: #ffffff;
-    padding: 60px 15px 40px;
+        /* ===== GST FEATURE SECTION ===== */
+.gst-feature-list {
+    padding-left: 18px;
 }
 
-.installation-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.installation-title {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
-    color: #0b5fa5;
-    margin-bottom: 10px;
-}
-
-.installation-subtitle {
-    text-align: center;
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* BUTTONS */
-.installation-actions {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.installation-actions a {
-    margin: 6px;
-    font-weight: 600;
-}
-
-/* STEPS */
-.installation-steps {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.installation-step {
-    margin-bottom: 18px;
-}
-
-.installation-step h6 {
+.gst-feature-list li {
     font-size: 14px;
-    font-weight: 600;
-    color: #0b5fa5;
-    margin-bottom: 4px;
-}
-
-.installation-step p {
-    font-size: 13px;
     color: #555;
-    margin: 0;
+    margin-bottom: 12px;
     line-height: 1.6;
 }
 
-/* VIDEO */
-.installation-video {
-    text-align: center;
-    margin-top: 35px;
+.gst-feature-section h4 {
+    font-size: 20px;
+}
+/* ===== GST ICON BLOCK ===== */
+.gst-icon-box {
+    width: 160px;
+    height: 160px;
+    background: #eef5ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.gst-icon-box i {
+    font-size: 72px;
+    color: #0b5fa5;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .gst-icon-box {
+        width: 120px;
+        height: 120px;
+    }
+
+    .gst-icon-box i {
+        font-size: 52px;
+    }
+}
+
+/* ========================================== */
+        .gst-simplified h5 {
+    font-size: 16px;
+}
+
+.gst-simplified p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+        /* ===== BUSY TRANSFORMATION SECTION ===== */
+.busy-transform {
+    background: #ffffff;
+    padding: 80px 15px;
+}
+
+.busy-transform-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b1d33;
+}
+
+.busy-transform-title span {
+    color: #0b5fa5;
+}
+
+.busy-transform-subtitle {
+    max-width: 850px;
+    margin: 10px auto 50px;
+    font-size: 15px;
+    color: #666;
+}
+
+/* Feature item */
+.transform-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.transform-icon {
+    width: 52px;
+    height: 52px;
+    background: #fdecee;
+    color: #e85b5b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.transform-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b1d33;
+    margin-bottom: 6px;
+}
+
+.transform-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .busy-transform {
+        padding: 60px 15px;
+    }
+
+    .busy-transform-title {
+        font-size: 26px;
+    }
 }
 
 /* FAQ SECTION WRAPPER */
@@ -198,29 +253,6 @@
 }
 
     
-        #navbar {
-            display: inline;
-        }
-
-        .youtube-button {
-            text-align: center;
-            margin: 20px 0;
-        }
-        /* ==========================corousel main part================================ */
-      
-        /* ===== FOOTER ===== */
-        .footer {
-            background: #2f2f2f;
-            color: #ccc;
-            padding: 60px 0;
-        }
-
-        .footer_bottom {
-            background: #1f1f1f;
-            color: #aaa;
-            padding: 15px 0;
-        }
-
         /* ===== NEW DEMO FORM STYLE (MATCH IMAGE) ===== */
 
 .demo-card-new {
@@ -287,8 +319,11 @@
     </style>
 </head>
 
-<body class="home">
-    @include('admin.newheaderformainpage')
+<body class="home"> 
+
+         @include('admin.newheaderformainpage')
+    <!--End Header-->
+
     {{-- ================= HERO SECTION ================= --}}
 
 
@@ -432,128 +467,250 @@
                 </div>
             </div>
         </section>
+        <!-- ================= GST SIMPLIFIED SECTION ================= -->
+<section class="gst-simplified py-5 bg-white">
+    <div class="container">
 
-        <!-- ================= SOFTWARE SETUP & INSTALLATION ================= -->
-<section class="installation-section">
-    <div class="installation-container">
-
-        <h3 class="installation-title">
-            Software Setup & Installation
-        </h3>
-        <p class="installation-subtitle">
-            {{ $softwarecompinfo->software_firm_name }}
-        </p>
-
-        <!-- ACTION BUTTONS -->
-        <div class="installation-actions">
-            <a href="https://drive.google.com/file/d/1UUPmKUF65G6aYCW970x4yL5I-DyWkwOA/view"
-               class="btn btn-primary">
-                <i class="fa fa-download"></i> Download Software
-            </a>
-
-            <a href="#" class="btn btn-secondary">
-                <i class="fa fa-database"></i> Download Demo Data
-            </a>
-
-           <a href="{{ url('/browser') }}"
-               class="btn btn-success">
-                <i class="fa fa-desktop"></i> Browser & Screen
-            </a>
-
-            <a href="{{ url('/features') }}"
-               class="btn btn-warning">
-                <i class="fa fa-list"></i> Features List
-            </a>
-
-            <a href="{{ url('/youtube') }}"
-               class="btn btn-info">
-                <i class="fa fa-video-camera"></i> Demo Video
-            </a>
+        <!-- Heading -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold text-primary">
+                    How {{ $softwarecompinfo->software_firm_name }} Simplified GST Accounting
+                </h2>
+                <p class="text-muted mt-2">
+                    Keeping up with the regulatory requirements can be a daunting task especially in the
+                    ever-evolving space of GST accounting. Here’s how
+                    {{ $softwarecompinfo->software_firm_name }} streamlines the GST accounting process:
+                </p>
+            </div>
         </div>
 
-        <!-- STEPS (IMAGE STYLE) -->
-        <div class="installation-steps">
+        <!-- Content -->
+        <div class="row">
 
-            <div class="installation-step">
-                <h6>Step 1: फ़ाइलें डाउनलोड करें (Download Files)</h6>
-                <p>
-                    ऊपर दिए गए बटन पर क्लिक करके सॉफ्टवेयर पैकेज और डेमो डेटा डाउनलोड करें।
-                </p>
+            <!-- Item 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="d-flex">
+                    <div class="me-3 text-primary fs-3">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">
+                            Automated GST Compliance with the Best GST Software
+                        </h5>
+                        <p class="text-muted">
+                            From seamless filing of <strong>GST Return</strong> to accurate input tax credit
+                            calculations, {{ $softwarecompinfo->software_firm_name }} accelerates the entire
+                            process, saving you time and reducing the risk of errors.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="installation-step">
-                <h6>Step 2: ज़िप फ़ाइल निकालें (Extract the ZIP)</h6>
-                <p>
-                    ज़िप फ़ाइल को अपनी पसंदीदा डायरेक्टरी में अनज़िप करें।
-                </p>
+            <!-- Item 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="d-flex">
+                    <div class="me-3 text-primary fs-3">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">
+                            User-Friendly Interface in GST Accounting Software
+                        </h5>
+                        <p class="text-muted">
+                            {{ $softwarecompinfo->software_firm_name }} makes tax calculations simple and
+                            accessible for everyone through its intuitive interface that is completely
+                            designed for managing GST-related tasks effortlessly.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="installation-step">
-                <h6>Step 3: Provider इंस्टॉल करें (Install Provider)</h6>
-                <p>
-                    सॉफ्टवेयर की डायरेक्टरी में आवश्यक provider इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 4: Support Files इंस्टॉल करें</h6>
-                <p>
-                    सभी आवश्यक समर्थन फ़ाइलें इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 5: Crystal Reports इंस्टॉल करें</h6>
-                <p>
-                    Key दर्ज करें: <strong>AVS50-81SG00S-G61002U</strong> ।  
-                    Restart पूछे तो <strong>No</strong> करें और अंत में
-                    <strong>Register Later</strong> चुनें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 6: Company बनाएँ या Demo Data Import करें</h6>
-                <p>
-                    Demo data को <strong>Speed Plus</strong> folder में paste करें
-                    और replace पूछे तो <strong>Yes</strong> करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <p>
-                    समस्या आने पर कॉल करें:
-                    <strong>7999663696</strong>
-                    या <a href="{{ url('todo_by_customer') }}">Instant Support</a>
-                </p>
+            <!-- Item 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="d-flex">
+                    <div class="me-3 text-primary fs-3">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">
+                            Real-Time GST Insights with GST Return Software
+                        </h5>
+                        <p class="text-muted">
+                            From monitoring tax liabilities to tracking <strong>input tax credits</strong>,
+                            {{ $softwarecompinfo->software_firm_name }} gives you access to real-time GST insights
+                            at your fingertips and critical GST-related data.
+                        </p>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-       <!-- VIDEO -->
-<div class="installation-video">
-    <h3 class="text-primary mb-3">Installation Video Tutorial</h3>
+        <!-- Bottom Link -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <h6 class="text-primary fw-bold">
+                    Send GST Invoices with {{ $softwarecompinfo->software_firm_name }} GST Filing Software
+                </h6>
+            </div>
+        </div>
 
-    <div class="ratio ratio-16x9 mb-3">
-        <iframe
-            src="https://www.youtube.com/embed/rSjeR3LHQUY"
-            title="Installation Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
     </div>
+</section>
 
-    <a href="https://www.youtube.com/watch?v=rSjeR3LHQUY"
-       target="_blank"
-       class="btn btn-primary">
-        <i class="fa fa-youtube-play"></i> Watch on YouTube
-    </a>
-</div>
+<!-- ================= BUSY TRANSFORMATION SECTION ================= -->
+<section class="busy-transform">
+    <div class="container">
+
+        <!-- Title -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="busy-transform-title">
+                    How <span>{{ $softwarecompinfo->software_firm_name }}</span> Transforms Business Accounting Experience
+                </h2>
+                <p class="busy-transform-subtitle">
+                    Streamline complex accounting tasks with <strong>{{ $softwarecompinfo->software_firm_name }}</strong>, which helps businesses
+                    with day-to-day accounting without extensive accounting knowledge.
+                </p>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <!-- Item 1 -->
+                <div class="transform-item">
+                    <div class="transform-icon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div>
+                        <h5>Time-Saving Automation</h5>
+                        <p>
+                            Automate routine business accounting tasks like billing, discount & tax calculations,
+                            bank reconciliation, reporting, etc.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="transform-item">
+                    <div class="transform-icon">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <div>
+                        <h5>Send Payment Reminders Automatically</h5>
+                        <p>
+                            Automate daily, weekly, or monthly payment reminders to ensure timely collections
+                            and improve cash flow.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="transform-item">
+                    <div class="transform-icon">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <div>
+                        <h5>P&amp;L Analysis by Bill-wise / SKU-wise / Batch-wise</h5>
+                        <p>
+                            Profit &amp; Loss analysis by Bill, SKU, or Batch-wise to get a clear overview
+                            of revenues and expenditures for any selected period.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= GST INVOICING & REPORTING SECTION ================= -->
+<!-- ================= GST INVOICING & REPORTING (ICON VERSION) ================= -->
+<section class="gst-feature-section py-5 bg-white">
+    <div class="container">
+
+        <!-- ===== SECTION 1 ===== -->
+        <div class="row align-items-center mb-5">
+
+            <!-- ICON -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="gst-icon-box">
+                    <i class="fa fa-file-text-o"></i>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-md-6">
+                <h4 class="fw-bold text-primary mb-3">
+                    GST Compliance and Accounting with Top GST Software
+                </h4>
+
+                <ul class="gst-feature-list">
+                    <li>
+                        Stay GST compliant anytime, anywhere and send customized
+                        <strong>GST invoices</strong> for faster payments.
+                    </li>
+                    <li>
+                        Generate GST return reports effortlessly to know tax liabilities
+                        and make payments faster.
+                    </li>
+                    <li>
+                        Record every receipt in {{ $softwarecompinfo->software_firm_name }}
+                        to stay updated with tax payment deadlines.
+                    </li>
+                </ul>
+
+                <a href="{{ url('/freetrial') }}" class="btn btn-danger mt-3">
+                    Try {{ $softwarecompinfo->software_firm_name }} for Free
+                </a>
+            </div>
+        </div>
+
+        <!-- ===== SECTION 2 ===== -->
+        <div class="row align-items-center flex-md-row-reverse">
+
+            <!-- ICON -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="gst-icon-box">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="col-md-6">
+                <h4 class="fw-bold text-primary mb-3">
+                    GST Reporting Features
+                </h4>
+
+                <ul class="gst-feature-list">
+                    <li>
+                        Generate GST return reports to file taxes seamlessly and
+                        track liabilities.
+                    </li>
+                    <li>
+                        Export <strong>GST return files in JSON</strong> and sync
+                        them directly with the GST portal.
+                    </li>
+                    <li>
+                        Reconcile purchases and track mismatches by adding supplier
+                        invoices in {{ $softwarecompinfo->software_firm_name }}.
+                    </li>
+                </ul>
+
+                <a href="{{ url('/freetrial') }}" class="btn btn-danger mt-3">
+                    Try {{ $softwarecompinfo->software_firm_name }} for Free
+                </a>
+            </div>
+        </div>
 
     </div>
 </section>
 
 
-        
         <!-- CTA SECTION -->
 
 </section><section class="faq-wrapper">
@@ -638,9 +795,8 @@
       
     </div>
 </section>
-
-
 @include('admin.partials.footerformainpage')
+
     <script type="text/javascript" src="{{ global_asset('/front_assets/js/jquery-1.10.2.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/jquery.easing.1.3.js') }}"></script>

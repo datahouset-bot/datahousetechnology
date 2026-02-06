@@ -41,71 +41,203 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-     /* ===== INSTALLATION STEPS (IMAGE STYLE) ===== */
-.installation-section {
+        /* ===== INDUSTRY GRID SECTION ===== */
+.busy-industries {
+    background: #f7fbff;
+    padding: 80px 15px;
+}
+
+.busy-industries-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0b1d33;
+    margin-bottom: 50px;
+}
+
+/* Card */
+.industry-card {
     background: #ffffff;
-    padding: 60px 15px 40px;
+    border-radius: 10px;
+    padding: 25px 20px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #eef2f7;
 }
 
-.installation-container {
-    max-width: 1100px;
-    margin: 0 auto;
+.industry-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
 }
 
-.installation-title {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
+/* Icon */
+.industry-icon {
+    width: 42px;
+    height: 42px;
+    background: #eef5ff;
     color: #0b5fa5;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
-.installation-subtitle {
-    text-align: center;
+/* Title */
+.industry-card h6 {
     font-size: 15px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* BUTTONS */
-.installation-actions {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.installation-actions a {
-    margin: 6px;
     font-weight: 600;
+    color: #0b1d33;
+    margin-bottom: 6px;
 }
 
-/* STEPS */
-.installation-steps {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.installation-step {
-    margin-bottom: 18px;
-}
-
-.installation-step h6 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #0b5fa5;
-    margin-bottom: 4px;
-}
-
-.installation-step p {
+/* Text */
+.industry-card p {
     font-size: 13px;
-    color: #555;
-    margin: 0;
-    line-height: 1.6;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 
-/* VIDEO */
-.installation-video {
-    text-align: center;
-    margin-top: 35px;
+/* Responsive */
+@media (max-width: 768px) {
+    .busy-industries {
+        padding: 60px 15px;
+    }
+}
+
+        /* ===== INDUSTRY GRID SECTION ===== */
+.busy-industries {
+    background: #f7fbff;
+    padding: 80px 15px;
+}
+
+.busy-industries-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0b1d33;
+    margin-bottom: 50px;
+}
+
+/* Card */
+.industry-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px 20px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #eef2f7;
+}
+
+.industry-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+.industry-icon {
+    width: 42px;
+    height: 42px;
+    background: #eef5ff;
+    color: #0b5fa5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* Title */
+.industry-card h6 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0b1d33;
+    margin-bottom: 6px;
+}
+
+/* Text */
+.industry-card p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .busy-industries {
+        padding: 60px 15px;
+    }
+}
+
+        /* ===== BUSY TRANSFORMATION SECTION ===== */
+.busy-transform {
+    background: #ffffff;
+    padding: 80px 15px;
+}
+
+.busy-transform-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b1d33;
+}
+
+.busy-transform-title span {
+    color: #0b5fa5;
+}
+
+.busy-transform-subtitle {
+    max-width: 850px;
+    margin: 10px auto 50px;
+    font-size: 15px;
+    color: #666;
+}
+
+/* Feature item */
+.transform-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.transform-icon {
+    width: 52px;
+    height: 52px;
+    background: #fdecee;
+    color: #e85b5b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.transform-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b1d33;
+    margin-bottom: 6px;
+}
+
+.transform-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .busy-transform {
+        padding: 60px 15px;
+    }
+
+    .busy-transform-title {
+        font-size: 26px;
+    }
 }
 
 /* FAQ SECTION WRAPPER */
@@ -196,31 +328,6 @@
     background: #0b5ed7;
     color: #fff;
 }
-
-    
-        #navbar {
-            display: inline;
-        }
-
-        .youtube-button {
-            text-align: center;
-            margin: 20px 0;
-        }
-        /* ==========================corousel main part================================ */
-      
-        /* ===== FOOTER ===== */
-        .footer {
-            background: #2f2f2f;
-            color: #ccc;
-            padding: 60px 0;
-        }
-
-        .footer_bottom {
-            background: #1f1f1f;
-            color: #aaa;
-            padding: 15px 0;
-        }
-
         /* ===== NEW DEMO FORM STYLE (MATCH IMAGE) ===== */
 
 .demo-card-new {
@@ -287,7 +394,7 @@
     </style>
 </head>
 
-<body class="home">
+<body class="home">  
     @include('admin.newheaderformainpage')
     {{-- ================= HERO SECTION ================= --}}
 
@@ -432,128 +539,227 @@
                 </div>
             </div>
         </section>
+<!-- ================= BUSY TRANSFORMATION SECTION ================= -->
+<section class="busy-transform">
+    <div class="container">
 
-        <!-- ================= SOFTWARE SETUP & INSTALLATION ================= -->
-<section class="installation-section">
-    <div class="installation-container">
-
-        <h3 class="installation-title">
-            Software Setup & Installation
-        </h3>
-        <p class="installation-subtitle">
-            {{ $softwarecompinfo->software_firm_name }}
-        </p>
-
-        <!-- ACTION BUTTONS -->
-        <div class="installation-actions">
-            <a href="https://drive.google.com/file/d/1UUPmKUF65G6aYCW970x4yL5I-DyWkwOA/view"
-               class="btn btn-primary">
-                <i class="fa fa-download"></i> Download Software
-            </a>
-
-            <a href="#" class="btn btn-secondary">
-                <i class="fa fa-database"></i> Download Demo Data
-            </a>
-
-           <a href="{{ url('/browser') }}"
-               class="btn btn-success">
-                <i class="fa fa-desktop"></i> Browser & Screen
-            </a>
-
-            <a href="{{ url('/features') }}"
-               class="btn btn-warning">
-                <i class="fa fa-list"></i> Features List
-            </a>
-
-            <a href="{{ url('/youtube') }}"
-               class="btn btn-info">
-                <i class="fa fa-video-camera"></i> Demo Video
-            </a>
+        <!-- Title -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="busy-transform-title">
+                    How <span>{{ $softwarecompinfo->software_firm_name }}</span> Transforms Business Accounting Experience
+                </h2>
+                <p class="busy-transform-subtitle">
+                    Streamline complex accounting tasks with <strong>{{ $softwarecompinfo->software_firm_name }}</strong>, which helps businesses
+                    with day-to-day accounting without extensive accounting knowledge.
+                </p>
+            </div>
         </div>
 
-        <!-- STEPS (IMAGE STYLE) -->
-        <div class="installation-steps">
+        <!-- Features -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
 
-            <div class="installation-step">
-                <h6>Step 1: फ़ाइलें डाउनलोड करें (Download Files)</h6>
-                <p>
-                    ऊपर दिए गए बटन पर क्लिक करके सॉफ्टवेयर पैकेज और डेमो डेटा डाउनलोड करें।
-                </p>
+                <!-- Item 1 -->
+                <div class="transform-item">
+                    <div class="transform-icon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div>
+                        <h5>Time-Saving Automation</h5>
+                        <p>
+                            Automate routine business accounting tasks like billing, discount & tax calculations,
+                            bank reconciliation, reporting, etc.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="transform-item">
+                    <div class="transform-icon">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <div>
+                        <h5>Send Payment Reminders Automatically</h5>
+                        <p>
+                            Automate daily, weekly, or monthly payment reminders to ensure timely collections
+                            and improve cash flow.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="transform-item">
+                    <div class="transform-icon">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <div>
+                        <h5>P&amp;L Analysis by Bill-wise / SKU-wise / Batch-wise</h5>
+                        <p>
+                            Profit &amp; Loss analysis by Bill, SKU, or Batch-wise to get a clear overview
+                            of revenues and expenditures for any selected period.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="installation-step">
-                <h6>Step 2: ज़िप फ़ाइल निकालें (Extract the ZIP)</h6>
-                <p>
-                    ज़िप फ़ाइल को अपनी पसंदीदा डायरेक्टरी में अनज़िप करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 3: Provider इंस्टॉल करें (Install Provider)</h6>
-                <p>
-                    सॉफ्टवेयर की डायरेक्टरी में आवश्यक provider इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 4: Support Files इंस्टॉल करें</h6>
-                <p>
-                    सभी आवश्यक समर्थन फ़ाइलें इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 5: Crystal Reports इंस्टॉल करें</h6>
-                <p>
-                    Key दर्ज करें: <strong>AVS50-81SG00S-G61002U</strong> ।  
-                    Restart पूछे तो <strong>No</strong> करें और अंत में
-                    <strong>Register Later</strong> चुनें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 6: Company बनाएँ या Demo Data Import करें</h6>
-                <p>
-                    Demo data को <strong>Speed Plus</strong> folder में paste करें
-                    और replace पूछे तो <strong>Yes</strong> करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <p>
-                    समस्या आने पर कॉल करें:
-                    <strong>7999663696</strong>
-                    या <a href="{{ url('todo_by_customer') }}">Instant Support</a>
-                </p>
-            </div>
-
         </div>
-
-       <!-- VIDEO -->
-<div class="installation-video">
-    <h3 class="text-primary mb-3">Installation Video Tutorial</h3>
-
-    <div class="ratio ratio-16x9 mb-3">
-        <iframe
-            src="https://www.youtube.com/embed/rSjeR3LHQUY"
-            title="Installation Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <a href="https://www.youtube.com/watch?v=rSjeR3LHQUY"
-       target="_blank"
-       class="btn btn-primary">
-        <i class="fa fa-youtube-play"></i> Watch on YouTube
-    </a>
-</div>
 
     </div>
 </section>
 
+      <!-- ================= BUSY INDUSTRIES SECTION ================= -->
+<section class="busy-industries">
+    <div class="container">
 
-        
+        <!-- Title -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="busy-industries-title">
+                    BUSY Accounting Software – Built for Every Industry
+                </h2>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="row">
+
+            <!-- Row 1 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-car"></i></div>
+                    <h6>Auto Parts</h6>
+                    <p>Streamline financial management, inventory, sales, tax, and invoicing.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-shopping-bag"></i></div>
+                    <h6>Retail</h6>
+                    <p>Fast billing, inventory tracking, sales analysis, and GST compliance.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-flask"></i></div>
+                    <h6>Chemical</h6>
+                    <p>Batch-wise accounting, stock valuation, and compliance tracking.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-cubes"></i></div>
+                    <h6>FMCG</h6>
+                    <p>Wholesale & distribution billing with GST and MIS reports.</p>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-cutlery"></i></div>
+                    <h6>Food & Beverage</h6>
+                    <p>POS billing, stock tracking, GST reports, and compliance.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-desktop"></i></div>
+                    <h6>Computer Hardware</h6>
+                    <p>Serial-wise tracking, warranty billing, and inventory control.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-book"></i></div>
+                    <h6>Book Publishing</h6>
+                    <p>Inventory, royalty accounting, invoicing, and customer data.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-bolt"></i></div>
+                    <h6>Electrical Goods</h6>
+                    <p>Batch-wise inventory, GST billing, and reporting.</p>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-plane"></i></div>
+                    <h6>Travel</h6>
+                    <p>Service billing, expense tracking, and GST compliance.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-bed"></i></div>
+                    <h6>Furniture</h6>
+                    <p>Production, stock control, invoicing, and reporting.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-medkit"></i></div>
+                    <h6>Pharma</h6>
+                    <p>Batch & expiry tracking with GST and compliance reports.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-paint-brush"></i></div>
+                    <h6>Paint</h6>
+                    <p>Shade-wise inventory, distributor billing, and analytics.</p>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-mobile"></i></div>
+                    <h6>Mobile Store</h6>
+                    <p>IMEI tracking, GST billing, and service management.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-scissors"></i></div>
+                    <h6>Garments</h6>
+                    <p>Size-wise inventory, billing, and production tracking.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-diamond"></i></div>
+                    <h6>Gems & Jewellery</h6>
+                    <p>Weight-wise accounting, purity tracking, and GST.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="industry-card">
+                    <div class="industry-icon"><i class="fa fa-leaf"></i></div>
+                    <h6>Agriculture</h6>
+                    <p>Produce trading, inventory, GST billing, and reports.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
         <!-- CTA SECTION -->
 
 </section><section class="faq-wrapper">
@@ -638,9 +844,8 @@
       
     </div>
 </section>
-
-
 @include('admin.partials.footerformainpage')
+
     <script type="text/javascript" src="{{ global_asset('/front_assets/js/jquery-1.10.2.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/jquery.easing.1.3.js') }}"></script>

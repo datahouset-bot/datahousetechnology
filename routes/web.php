@@ -111,6 +111,21 @@ Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [LandingpageController::class, 'show_secondindexpage'])->name('second_index');
 Route::get('/freetrial', [LandingpageController::class, 'freetrial'])->name('freetrial');
+Route::get('/accounting', [LandingpageController::class, 'accounting'])->name('accounting');
+Route::get('/accountingguide', [LandingpageController::class, 'accountingguide'])->name('accountingguide');
+Route::get('/financialaccounting', [App\Http\Controllers\LandingpageController::class, 'financialaccounting'])->name('financialaccounting');
+Route::get('/auto-e-bill', [App\Http\Controllers\LandingpageController::class, 'auto_eway_bill'])->name('auto_eway_bill');
+Route::get('/auto-e-invoice', function () {
+    return view('frontui.frontpages.autoevoice');
+})->name('auto_e_invoice');
+
+Route::get('/auto-gst-reconcillation', function () {
+    return view('frontui.frontpages.gstreconcillation');
+})->name('auto_gst_reconcillation');
+
+route::get('/inventory', function () {
+    return view('frontui.frontpages.inventory');
+})->name('inventory');
 Route::get('/mantinace_mode', [App\Http\Controllers\MaintenancemodeController::class, 'index']);
 Route::post('/maintenancemode/update', [App\Http\Controllers\MaintenancemodeController::class, 'update'])->name('maintenancemode.update');
 
@@ -649,10 +664,10 @@ route::get('quotation_print_view4/{id}', [App\Http\Controllers\QuotationControll
 
 //----------------------------purchase- sales invetory  stock managment -------------------------
 Route::resource('purchases', PurchaseController::class);
-Route::get('purchases_show/{id}', [App\Http\Controllers\purchasecontroller::class, 'purchase_show']);
-Route::get('purchase_print_view/{id}', [App\Http\Controllers\purchasecontroller::class, 'purchase_print_view']);
-Route::get('purchase_print_view2/{id}', [App\Http\Controllers\purchasecontroller::class, 'purchase_print_view2']);
-Route::get('purchase_print_view3/{id}', [App\Http\Controllers\purchasecontroller::class, 'purchase_print_view3']);
+Route::get('purchases_show/{id}', [App\Http\Controllers\PurchaseController::class, 'purchase_show']);
+Route::get('purchase_print_view/{id}', [App\Http\Controllers\PurchaseController::class, 'purchase_print_view']);
+Route::get('purchase_print_view2/{id}', [App\Http\Controllers\PurchaseController::class, 'purchase_print_view2']);
+Route::get('purchase_print_view3/{id}', [App\Http\Controllers\PurchaseController::class, 'purchase_print_view3']);
 Route::resource('inventories', InventoryController::class);
 Route::resource('stocktransfers', StocktransferController::class);
 route::get('purchase_view/{id}', [App\Http\Controllers\StocktransferController::class, 'purchase_view']);

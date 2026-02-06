@@ -41,71 +41,188 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-     /* ===== INSTALLATION STEPS (IMAGE STYLE) ===== */
-.installation-section {
-    background: #ffffff;
-    padding: 60px 15px 40px;
+        /* ===== FINANCIAL ACCOUNTING SECTION ===== *//* ===== FINANCIAL PROCESS (IMAGE MATCH) ===== */
+
+.finance-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #003366;
 }
 
-.installation-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.installation-title {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
-    color: #0b5fa5;
-    margin-bottom: 10px;
-}
-
-.installation-subtitle {
-    text-align: center;
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* BUTTONS */
-.installation-actions {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.installation-actions a {
-    margin: 6px;
-    font-weight: 600;
-}
-
-/* STEPS */
-.installation-steps {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.installation-step {
-    margin-bottom: 18px;
-}
-
-.installation-step h6 {
+.finance-subtitle {
     font-size: 14px;
+    color: #666;
+    max-width: 900px;
+    margin: 10px auto 0;
+}
+
+.finance-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.finance-icon-box {
+    width: 34px;
+    height: 34px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.finance-link {
+    font-size: 15px;
     font-weight: 600;
-    color: #0b5fa5;
-    margin-bottom: 4px;
+    color: #0056b3;
+    text-decoration: none;
 }
 
-.installation-step p {
+.finance-link:hover {
+    text-decoration: underline;
+}
+
+.finance-row p {
     font-size: 13px;
-    color: #555;
-    margin: 0;
-    line-height: 1.6;
+    color: #666;
+    margin: 4px 0 0;
+    line-height: 1.5;
+}
+/* ===== OPTIMIZE FINANCE (ICON STYLE) ===== */
+
+.optimize-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #003366;
 }
 
-/* VIDEO */
-.installation-video {
-    text-align: center;
-    margin-top: 35px;
+.optimize-block {
+    padding: 70px 0;
+}
+
+.bg-soft {
+    background: #fdeff2;
+}
+
+.optimize-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* ICON LOOK (replaces illustration) */
+.optimize-icon {
+    font-size: 120px;
+    color: #0b5fa5;
+}
+
+.optimize-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.optimize-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.optimize-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e85b5b;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.optimize-btn {
+    background: #e85b5b;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.optimize-btn:hover {
+    background: #d84c4c;
+    color: #fff;
+}
+
+
+        /* ===== BUSY TRANSFORMATION SECTION ===== */
+.busy-transform {
+    background: #ffffff;
+    padding: 80px 15px;
+}
+
+.busy-transform-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b1d33;
+}
+
+.busy-transform-title span {
+    color: #0b5fa5;
+}
+
+.busy-transform-subtitle {
+    max-width: 850px;
+    margin: 10px auto 50px;
+    font-size: 15px;
+    color: #666;
+}
+
+/* Feature item */
+.transform-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.transform-icon {
+    width: 52px;
+    height: 52px;
+    background: #fdecee;
+    color: #e85b5b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.transform-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b1d33;
+    margin-bottom: 6px;
+}
+
+.transform-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .busy-transform {
+        padding: 60px 15px;
+    }
+
+    .busy-transform-title {
+        font-size: 26px;
+    }
 }
 
 /* FAQ SECTION WRAPPER */
@@ -198,29 +315,6 @@
 }
 
     
-        #navbar {
-            display: inline;
-        }
-
-        .youtube-button {
-            text-align: center;
-            margin: 20px 0;
-        }
-        /* ==========================corousel main part================================ */
-      
-        /* ===== FOOTER ===== */
-        .footer {
-            background: #2f2f2f;
-            color: #ccc;
-            padding: 60px 0;
-        }
-
-        .footer_bottom {
-            background: #1f1f1f;
-            color: #aaa;
-            padding: 15px 0;
-        }
-
         /* ===== NEW DEMO FORM STYLE (MATCH IMAGE) ===== */
 
 .demo-card-new {
@@ -287,8 +381,11 @@
     </style>
 </head>
 
-<body class="home">
-    @include('admin.newheaderformainpage')
+<body class="home"> 
+
+         @include('admin.newheaderformainpage')
+    <!--End Header-->
+
     {{-- ================= HERO SECTION ================= --}}
 
 
@@ -363,24 +460,18 @@
                     <!-- LEFT CONTENT -->
                     <div class="col-lg-7">
                         <h1 class="busy-title">
-                            {{ $softwarecompinfo->software_firm_name }} Online –
-                            <br>
-                            <span>Run Your Business Anytime, Anywhere</span>
+                            Simplify GST Reconciliation with {{ $softwarecompinfo->software_firm_name }} Software
+                          
                         </h1>
 
                         <p class="busy-subtitle">
-                            {{ $softwarecompinfo->software_firm_name }} is a cloud-ready
-                            business software suite designed for Indian SMEs.
-                            Manage accounting, billing, inventory, GST and operations
-                            securely from anywhere — no IT expertise required.
+                         Unlock the power of BUSY’s specialised GST reconciliation software.
+                          Simplify the reconciliation process by seamlessly aligning your  GST
+                           returns  with financial records. Join hands with 360000+ customers 
+                           of BUSY in India.
                         </p>
 
-                        <ul class="busy-points">
-                            <li><i class="fa fa-check-circle"></i> Cloud & GST Ready</li>
-                            <li><i class="fa fa-check-circle"></i> Secure Remote Access</li>
-                            <li><i class="fa fa-check-circle"></i> Multi-Business Support</li>
-                            <li><i class="fa fa-check-circle"></i> Trusted by 1000+ Businesses</li>
-                        </ul>
+                       
                     </div>
 
                     <!-- RIGHT DEMO CARD -->
@@ -431,129 +522,210 @@
 
                 </div>
             </div>
-        </section>
+        </section><!-- ================= FINANCIAL ACCOUNTING (IMAGE MATCH) ================= --><section class="financial-process py-5 bg-white">
+    <div class="container">
 
-        <!-- ================= SOFTWARE SETUP & INSTALLATION ================= -->
-<section class="installation-section">
-    <div class="installation-container">
-
-        <h3 class="installation-title">
-            Software Setup & Installation
-        </h3>
-        <p class="installation-subtitle">
-            {{ $softwarecompinfo->software_firm_name }}
-        </p>
-
-        <!-- ACTION BUTTONS -->
-        <div class="installation-actions">
-            <a href="https://drive.google.com/file/d/1UUPmKUF65G6aYCW970x4yL5I-DyWkwOA/view"
-               class="btn btn-primary">
-                <i class="fa fa-download"></i> Download Software
-            </a>
-
-            <a href="#" class="btn btn-secondary">
-                <i class="fa fa-database"></i> Download Demo Data
-            </a>
-
-           <a href="{{ url('/browser') }}"
-               class="btn btn-success">
-                <i class="fa fa-desktop"></i> Browser & Screen
-            </a>
-
-            <a href="{{ url('/features') }}"
-               class="btn btn-warning">
-                <i class="fa fa-list"></i> Features List
-            </a>
-
-            <a href="{{ url('/youtube') }}"
-               class="btn btn-info">
-                <i class="fa fa-video-camera"></i> Demo Video
-            </a>
+        <!-- Heading -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="finance-title">
+                    How {{ $softwarecompinfo->software_firm_name }} Simplified the GST Reconciliation Process
+                </h2>
+                <p class="finance-subtitle">
+                    Identify mismatches, correct errors and ensure accurate & compliant GST filings with
+                    {{ $softwarecompinfo->software_firm_name }} GST Reconciliation Software.
+                </p>
+            </div>
         </div>
 
-        <!-- STEPS (IMAGE STYLE) -->
-        <div class="installation-steps">
+        <!-- LIST -->
+        <div class="row justify-content-center">
+            <div class="col-md-10">
 
-            <div class="installation-step">
-                <h6>Step 1: फ़ाइलें डाउनलोड करें (Download Files)</h6>
-                <p>
-                    ऊपर दिए गए बटन पर क्लिक करके सॉफ्टवेयर पैकेज और डेमो डेटा डाउनलोड करें।
-                </p>
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-file-text-o"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            On-Demand Customized Reports
+                        </a>
+                        <p>
+                            Take charge of disputed invoices and mismatches with customized GST reconciliation reports.
+                            Gain clear insights and categorize disputes easily.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Maintain Transparency and Avoid Penalties
+                        </a>
+                        <p>
+                            Track mismatches across multiple GST returns for complete visibility and
+                            reduce compliance risks with accurate reconciliation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-percent"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Maximise Input Tax Credit
+                        </a>
+                        <p>
+                            Ensure your ITC claims are accurate by minimizing rejected invoices and
+                            reconciling returns with high accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="finance-row">
+                    <div class="finance-icon-box">
+                        <i class="fa fa-exclamation-circle"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="finance-link">
+                            Error Detection and Resolution
+                        </a>
+                        <p>
+                            Identify inconsistencies, duplicate invoices and incorrect tax calculations
+                            quickly to stay GST compliant.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="installation-step">
-                <h6>Step 2: ज़िप फ़ाइल निकालें (Extract the ZIP)</h6>
-                <p>
-                    ज़िप फ़ाइल को अपनी पसंदीदा डायरेक्टरी में अनज़िप करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 3: Provider इंस्टॉल करें (Install Provider)</h6>
-                <p>
-                    सॉफ्टवेयर की डायरेक्टरी में आवश्यक provider इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 4: Support Files इंस्टॉल करें</h6>
-                <p>
-                    सभी आवश्यक समर्थन फ़ाइलें इंस्टॉल करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 5: Crystal Reports इंस्टॉल करें</h6>
-                <p>
-                    Key दर्ज करें: <strong>AVS50-81SG00S-G61002U</strong> ।  
-                    Restart पूछे तो <strong>No</strong> करें और अंत में
-                    <strong>Register Later</strong> चुनें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <h6>Step 6: Company बनाएँ या Demo Data Import करें</h6>
-                <p>
-                    Demo data को <strong>Speed Plus</strong> folder में paste करें
-                    और replace पूछे तो <strong>Yes</strong> करें।
-                </p>
-            </div>
-
-            <div class="installation-step">
-                <p>
-                    समस्या आने पर कॉल करें:
-                    <strong>7999663696</strong>
-                    या <a href="{{ url('todo_by_customer') }}">Instant Support</a>
-                </p>
-            </div>
-
         </div>
-
-       <!-- VIDEO -->
-<div class="installation-video">
-    <h3 class="text-primary mb-3">Installation Video Tutorial</h3>
-
-    <div class="ratio ratio-16x9 mb-3">
-        <iframe
-            src="https://www.youtube.com/embed/rSjeR3LHQUY"
-            title="Installation Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <a href="https://www.youtube.com/watch?v=rSjeR3LHQUY"
-       target="_blank"
-       class="btn btn-primary">
-        <i class="fa fa-youtube-play"></i> Watch on YouTube
-    </a>
-</div>
 
     </div>
 </section>
 
+<!-- ================= GST INVOICING & REPORTING (ICON VERSION) ================= --><!-- ================= OPTIMIZE FINANCIAL OPERATIONS (ICON VERSION) ================= -->
+<section class="optimize-finance">
 
-        
+    <div class="container text-center mb-5">
+        <h2 class="optimize-title">
+            Get GST Reconciliation Right With
+            {{ $softwarecompinfo->software_firm_name }}
+        </h2>
+    </div>
+
+    <div class="optimize-block bg-soft">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <div class="optimize-icon">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="optimize-heading">Simplify GST Reports Effortless</h4>
+                    <ul class="optimize-list">
+                        <li>Automatic GST report downloads</li>
+                        <li>Analyse GSTR-1, GSTR-2A & GSTR-3B</li>
+                        <li>Stay GST compliant with powerful reporting tools</li>
+                        <li>View GSTIN-wise, PAN-wise & vendor-wise data</li>
+                        <li>Compare GST returns easily</li>
+                    </ul>
+                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">Try Busy for Free</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BLOCK 2 -->   
+     <div class="optimize-block">
+        <div class="container">
+            <div class="row align-items-center flex-md-row-reverse">
+
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <div class="optimize-icon">
+                        <i class="fa fa-download"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="optimize-heading">Download Files in JSON Format</h4>
+                    <ul class="optimize-list">
+                        <li>Simplified GST filing</li>
+                        <li>Download & view reports easily</li>
+                        <li>Access multi-month comparison reports</li>
+                        <li>Track GSTIN details & customize filing preferences</li>
+                        <li>Automate JSON file downloads</li>
+                    </ul>
+                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">Try Busy for Free</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BLOCK 3 -->    <div class="optimize-block bg-soft">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <div class="optimize-icon">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="optimize-heading">Customizable Configuration</h4>
+                    <ul class="optimize-list">
+                        <li>Handle multiple businesses easily</li>
+                        <li>Manage user permissions & onboard suppliers</li>
+                        <li>Integrate ERP systems & configure job roles</li>
+                        <li>Track payments & manage invoice templates</li>
+                        <li>Customize reconciliation preferences</li>
+                    </ul>
+                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">Try Busy for Free</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOCK 4 -->    <div class="optimize-block">
+        <div class="container">
+            <div class="row align-items-center flex-md-row-reverse">
+
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <div class="optimize-icon">
+                        <i class="fa fa-random"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="optimize-heading">Auto-Matching of Invoices</h4>
+                    <ul class="optimize-list">
+                        <li>Match invoices between GSTR-1 & GSTR-2A</li>
+                        <li>Identify & flag unmatched invoices</li>
+                        <li>Access intuitive rule-based reconciliation</li>
+                        <li>High accuracy matching of 2B/2A data</li>
+                        <li>Set tolerance levels as per business needs</li>
+                    </ul>
+                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">Try Busy for Free</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
         <!-- CTA SECTION -->
 
 </section><section class="faq-wrapper">
@@ -638,9 +810,8 @@
       
     </div>
 </section>
-
-
 @include('admin.partials.footerformainpage')
+
     <script type="text/javascript" src="{{ global_asset('/front_assets/js/jquery-1.10.2.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ global_asset('/front_assets/js/jquery.easing.1.3.js') }}"></script>

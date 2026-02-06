@@ -19,4 +19,25 @@ class LandingpageController extends Controller
         $itemgroup = itemgroup::where('head_group', '=', 'nav')->get();
         return view('frontui.frontpartials.freetrial', compact('itemgroup'));
     }
+
+       public function accounting()
+    {
+        $itemgroup = itemgroup::where('head_group', '=', 'nav')->get();
+        return view('frontui.frontpartials.accounting', compact('itemgroup'));
+    }
+        public function accountingguide()
+    {
+        $itemgroup = itemgroup::where('head_group', '=', 'nav')->get();
+        return view('frontui.frontpartials.accountingguide', compact('itemgroup'));
+    }
+        public function financialaccounting()
+    {
+
+        return view('frontui.frontpages.financialaccounting');
+    }
+        public function auto_eway_bill()
+    {
+
+        return view('frontui.frontpages.autoebill');
+    }
 }
