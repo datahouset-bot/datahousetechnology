@@ -126,6 +126,34 @@ Route::get('/auto-gst-reconcillation', function () {
 route::get('/inventory', function () {
     return view('frontui.frontpages.inventory');
 })->name('inventory');
+
+route::get('/busy', function () {
+    return view('frontui.frontpages.busy');
+})->name('busy');
+
+route::get('/speedplus', function () {
+    return view('frontui.frontpages.speedplus');
+})->name('speedplus');
+
+route::get('/marg', function () {
+    return view('frontui.frontpages.marg');
+})->name('marg');
+
+route::get('/billingsoftware', function () {
+    return view('frontui.frontpages.billingsoftware');
+})->name('billingsoftware');
+
+route::get('/cloudservice', function () {
+    return view('frontui.frontpages.cloudservice');
+})->name('cloudservice');
+
+route::get('/tally', function () {
+    return view('frontui.frontpages.tally');
+})->name('tally');
+
+Route::get('/support', function () {
+    return view('frontui.frontpages.support');
+})->name('support');
 Route::get('/mantinace_mode', [App\Http\Controllers\MaintenancemodeController::class, 'index']);
 Route::post('/maintenancemode/update', [App\Http\Controllers\MaintenancemodeController::class, 'update'])->name('maintenancemode.update');
 

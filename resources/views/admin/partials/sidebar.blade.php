@@ -844,7 +844,7 @@
                         </div>
                     @endcan
 
-                    @can('help')
+                    
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             style=" ." data-bs-target="#collapsehelp" aria-expanded="false"
                             aria-controls="collapsehelp">
@@ -882,7 +882,7 @@
                                 </div>
                             </nav>
                         </div>
-                    @endcan
+            
 
 
 

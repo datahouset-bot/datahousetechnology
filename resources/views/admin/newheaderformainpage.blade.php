@@ -151,6 +151,29 @@
             background: #d84c4c;
             color: #fff;
         }
+
+        /* ===== HELP & SUPPORT ICON ===== */
+
+.busy-support {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f1f6fb;
+    color: #0b5fa5;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.busy-support:hover {
+    background: #0b5fa5;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
     </style>
 </head>
 <body>
@@ -193,12 +216,12 @@
                         <!-- PLANS -->
                         <div class="col-md-4">
                             <h6 class="mega-title">PRODUCTS & PRICING</h6>
-                            <a class="mega-item" href="#">BUSY</a>
-                            <a class="mega-item" href="#">SPEED PLUS</a>
-                            <a class="mega-item" href="#">MARG</a>
-                            <a class="mega-item" href="#">TALLY</a>
-                            <a class="mega-item" href="#">BILLING SOFTWARE</a>
-                            <a class="mega-item" href="#">CLOUD SERVICE</a>
+                            <a class="mega-item" href="{{ route('speedplus') }}">SPEED PLUS</a>
+                            <a class="mega-item" href="{{ route('marg') }}">MARG</a>
+                            <a class="mega-item" href="{{ route('tally') }}">TALLY</a>
+                            <a class="mega-item" href="{{ route('busy') }}">BUSY</a>
+                            <a class="mega-item" href="{{ route('billingsoftware') }}">BILLING SOFTWARE</a>
+                            <a class="mega-item" href="{{ route('cloudservice') }}">CLOUD SERVICE</a>
                         </div>
 
                         <!-- FEATURES -->
@@ -211,7 +234,7 @@
                             <a class="mega-item" href="{{ route('auto_e_invoice') }}">Auto E-Invoice</a>
                             <a class="mega-item" href="{{ route('auto_gst_reconcillation') }}">GSTR Reconciliation</a>
                             <a class="mega-item" href="{{ route('inventory') }}">Inventory</a>
-                            <a class="mega-item" href="#">FAQs</a>
+                            <a class="mega-item" href="">FAQs</a>
                         </div>
 
                         <!-- INDUSTRIES -->
@@ -231,9 +254,6 @@
                 
             </div>
         </li>
-
-        <!-- GST NORMAL DROPDOWN -->
-        <!-- GST MEGA DROPDOWN -->
 <li class="nav-item dropdown mega-dropdown">
     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
         GST
@@ -318,7 +338,7 @@
 
             <!-- RIGHT ACTION -->
             <div class="busy-actions">
-               @guest
+               {{-- @guest
 
                             @if (Route::has('login'))
                                 <a class="btn btn-info"  href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -343,13 +363,18 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                            @endguest
+                            @endguest --}}
 
                 <a href="{{ url('/freetrial') }}" class="btn busy-trial-btn">
                     Free Trial
                 </a>
+                 <!-- HELP & SUPPORT -->
+    
             </div>
 
+            <a href="{{ url('/support') }}" class="busy-support" title="Help & Support">
+        <i class="fa fa-life-ring"></i>
+    </a>
         </div>
     </header>
 </body>

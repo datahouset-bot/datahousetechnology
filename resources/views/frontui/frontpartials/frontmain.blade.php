@@ -714,7 +714,57 @@
                 padding: 60px 0;
             }
         }
-    </style>
+
+       /* ================= EXTRA SMALL VIDEO CARDS ================= */
+
+.video-search-section {
+    background: #f8fbff;
+    padding: 40px 0 30px;
+}
+
+.video-search-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0b1d33;
+}
+
+/* Video Card */
+.video-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-2px);
+}
+
+/* 👇 VERY SMALL VIDEO */
+.video-card iframe {
+    width: 100%;
+    height: 150px;          /* 🔥 very compact */
+    border: none;
+}
+
+/* 👇 Small title */
+.video-card h6 {
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 6px 8px;
+    margin: 0;
+    line-height: 1.3;
+    color: #333;
+}
+
+/* Grid item */
+.video-item {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+</style>
 </head>
 
 <body class="home">
@@ -787,7 +837,7 @@
 
     </header> --}}
     <!--End Header-->
-
+   
     <section class="wrapper">
         <section class="cloud-hero busy-hero">
             <div class="container">
@@ -885,6 +935,61 @@
 
 
         <!--end info service-->
+         <!-- ================= VIDEO SEARCH SECTION ================= -->
+<section class="video-search-section">
+    <div class="container">
+
+        <!-- TITLE -->
+        <div class="text-center mb-4">
+            <h2 class="video-search-title">
+                Explore Product Videos
+            </h2>
+            <p class="text-muted">
+                Search and watch BUSY / MARG demo & introduction videos
+            </p>
+        </div>
+
+        <!-- SEARCH BOX -->
+        <div class="video-search-box mb-4">
+            <input
+                type="text"
+                id="videoSearch"
+                class="form-control"
+                placeholder="Search videos (GST, Accounting, Demo, Cloud...)">
+        </div>
+
+        <!-- VIDEO GRID -->
+       <div class="row" id="videoGrid">
+
+    @foreach($videos as $video)
+        <div class="col-md-4 mb-4 video-item"
+             data-title="{{ strtolower($video->type.' '.$video->topic) }}">
+
+            <div class="video-card">
+                <iframe
+                    src="https://www.youtube.com/embed/{{ $video->url }}"
+                    allowfullscreen>
+                </iframe>
+
+                <h6>{{ $video->topic }}</h6>
+            </div>
+
+        </div>
+    @endforeach
+
+    @if($videos->isEmpty())
+        <div class="col-12 text-center text-muted">
+            No videos available
+        </div>
+    @endif
+
+</div>
+
+
+    </div>
+</section>
+
+
 
         <!--Start recent work-->
         <section class="cloud-products">
@@ -978,59 +1083,7 @@
             </div>
         </section>
 
-        <!-- ================= PRICING SECTION ================= -->
-        <section class="pricing-section">
-            <div class="pricing-container text-center">
-
-                <h2 class="pricing-title">
-                    Ready to Grow Your Business With Us?
-                </h2>
-
-                <!-- Toggle -->
-                <div class="pricing-toggle">
-                    <button id="yearlyBtn" class="active">Yearly</button>
-                    <button id="quarterlyBtn">Quarterly</button>
-                </div>
-
-                <!-- Pricing Card -->
-                <div class="pricing-card">
-
-                    <!-- Left -->
-                    <div class="pricing-left">
-                        <div class="pricing-icon">
-                            <i class="fa fa-rupee"></i>
-                        </div>
-
-                        <p class="pricing-label">Subscription Amount</p>
-                        <small>Per User</small>
-
-                        <h2 class="price">
-                            <span id="priceAmount">₹10,800</span>
-                            <span id="priceDuration">/ Yearly</span>
-                        </h2>
-
-
-                        <small class="tax-note">*Prices are exclusive of GST</small>
-                    </div>
-
-                    <!-- Right -->
-                    <div class="pricing-right">
-                        <h5>What’s included</h5>
-                        <ul id="pricingFeatures">
-                            <li><i class="fa fa-check-circle"></i> One Company is allowed</li>
-                            <li><i class="fa fa-check-circle"></i> ₹7,200/- for Additional Company</li>
-                            <li><i class="fa fa-check-circle"></i> Cloud Access (24×7)</li>
-                            <li><i class="fa fa-check-circle"></i> Secure Data Backup</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-    
+      
 <!-- ================= INFRA & SERVICES SECTION ================= -->
 <section class="infra-services">
     <div class="container">
@@ -1309,45 +1362,6 @@
         new WOW().init();
     </script>
 
-
-    <script>
-        const yearlyBtn = document.getElementById('yearlyBtn');
-        const quarterlyBtn = document.getElementById('quarterlyBtn');
-
-        const priceAmount = document.getElementById('priceAmount');
-        const priceDuration = document.getElementById('priceDuration');
-        const pricingFeatures = document.getElementById('pricingFeatures');
-
-        yearlyBtn.addEventListener('click', function() {
-            yearlyBtn.classList.add('active');
-            quarterlyBtn.classList.remove('active');
-
-            priceAmount.innerText = '₹10,800';
-            priceDuration.innerText = '/ Yearly';
-
-            pricingFeatures.innerHTML = `
-            <li><i class="fa fa-check-circle"></i> One Company is allowed</li>
-            <li><i class="fa fa-check-circle"></i> ₹7,200/- for Additional Company</li>
-            <li><i class="fa fa-check-circle"></i> Cloud Access (24×7)</li>
-            <li><i class="fa fa-check-circle"></i> Secure Data Backup</li>
-        `;
-        });
-
-        quarterlyBtn.addEventListener('click', function() {
-            quarterlyBtn.classList.add('active');
-            yearlyBtn.classList.remove('active');
-
-            priceAmount.innerText = '₹3,000';
-            priceDuration.innerText = '/ Quarterly';
-
-            pricingFeatures.innerHTML = `
-            <li><i class="fa fa-check-circle"></i> One Company is allowed</li>
-            <li><i class="fa fa-check-circle"></i> ₹2,200/- for Additional Company</li>
-            <li><i class="fa fa-check-circle"></i> Cloud Access (24×7)</li>
-            <li><i class="fa fa-check-circle"></i> Secure Quarterly Backup</li>
-        `;
-        });
-    </script>
 <script>
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
@@ -1358,6 +1372,18 @@
             });
 
             item.classList.toggle('active');
+        });
+    });
+</script>
+
+<script>
+    $('#videoSearch').on('keyup', function () {
+        let value = $(this).val().toLowerCase();
+
+        $('#videoGrid .video-item').filter(function () {
+            $(this).toggle(
+                $(this).data('title').toLowerCase().indexOf(value) > -1
+            );
         });
     });
 </script>
