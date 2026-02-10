@@ -41,6 +41,98 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+        /* ===== EMPLOYEE & PAYROLL SECTION ===== */
+
+.employee-section {
+    background: #f8fbff;
+}
+
+.employee-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #003366;
+}
+
+.employee-desc {
+    font-size: 14px;
+    color: #666;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Feature rows */
+.employee-feature {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.employee-feature i {
+    font-size: 24px;
+    color: #0b5fa5;
+    background: #eaf2ff;
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.employee-feature h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #0b1d33;
+}
+
+.employee-feature p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Right card */
+.employee-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.employee-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b1d33;
+}
+
+/* List */
+.employee-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.employee-list li {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Button */
+.employee-btn {
+    background: #e85b5b;
+    color: #fff;
+    padding: 10px 22px;
+    font-size: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.employee-btn:hover {
+    background: #d84c4c;
+    color: #fff;
+}
+
         /* ================= SUPPORT SECTION ================= */
 
 .busy-support-section {
@@ -263,73 +355,6 @@
     background: #e63946;
     color: #fff;
 }
-
-/* ===== OPTIMIZE FINANCE (ICON STYLE) ===== */
-
-.optimize-title {
-    font-size: 26px;
-    font-weight: 700;
-    color: #003366;
-}
-
-.optimize-block {
-    padding: 70px 0;
-}
-
-.bg-soft {
-    background: #fdeff2;
-}
-
-.optimize-heading {
-    font-size: 18px;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 15px;
-}
-
-/* ICON LOOK (replaces illustration) */
-.optimize-icon {
-    font-size: 120px;
-    color: #0b5fa5;
-}
-
-.optimize-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-}
-
-.optimize-list li {
-    position: relative;
-    padding-left: 18px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #555;
-}
-
-.optimize-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #e85b5b;
-    font-size: 22px;
-    line-height: 1;
-}
-
-.optimize-btn {
-    background: #e85b5b;
-    color: #fff;
-    font-size: 14px;
-    padding: 8px 18px;
-    border-radius: 6px;
-}
-
-.optimize-btn:hover {
-    background: #d84c4c;
-    color: #fff;
-}
-
-
         /* ===== BUSY TRANSFORMATION SECTION ===== */
 .busy-transform {
     background: #ffffff;
@@ -756,169 +781,94 @@
         </div>
     </div>
 </section>
+<!-- ================= EMPLOYEE & PAYROLL MANAGEMENT ================= -->
+<section class="employee-section py-5">
+    <div class="container">
 
-<section class="optimize-finance">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+            <h2 class="employee-title">
+                Employee & Payroll Management Made Easy
+            </h2>
+            <p class="employee-desc">
+                Manage employee records, salaries, attendance, and statutory compliance
+                seamlessly with {{ $softwarecompinfo->software_firm_name }}.
+            </p>
+        </div>
 
-    <!-- SECTION TITLE -->
-    <div class="container text-center mb-5">
-        <h2 class="optimize-title">
-            Why {{ $softwarecompinfo->software_firm_name }} is the Best Accounting Software for Your Business?
-        </h2>
-    </div>
+        <div class="row align-items-center">
 
-    <!-- BLOCK 1 : ACCOUNTING -->
-    <div class="optimize-block bg-soft">
-        <div class="container">
-            <div class="row align-items-center">
+            <!-- LEFT : FEATURES -->
+            <div class="col-md-6">
 
-                <!-- ICON -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <div class="optimize-icon">
-                        <i class="fa fa-book"></i>
+                <div class="employee-feature">
+                    <i class="fa fa-id-card"></i>
+                    <div>
+                        <h5>Employee Master</h5>
+                        <p>Create & manage employee profiles with personal, salary, and statutory details.</p>
                     </div>
                 </div>
 
-                <!-- CONTENT -->
-                <div class="col-md-6">
-                    <h4 class="optimize-heading">Accounting</h4>
-                    <ul class="optimize-list">
-                        <li>Multi-Company / Multi-Financial Year</li>
-                        <li>All Books of Accounts</li>
-                        <li>Balance Sheet with various schedules</li>
-                        <li>Daily / Monthly summaries of accounts & groups</li>
-                        <li>Aging analysis on FIFO basis</li>
-                        <li>Depreciation chart (As per Company Act / IT Act)</li>
-                        <li>Interest calculation (only product basis & month wise)</li>
-                        <li>Printing of bank deposit slip</li>
-                    </ul>
-                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
-                    book free trial
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- BLOCK 2 : STOCK MANAGEMENT -->
-    <div class="optimize-block">
-        <div class="container">
-            <div class="row align-items-center flex-md-row-reverse">
-
-                <!-- ICON -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <div class="optimize-icon">
-                        <i class="fa fa-cubes"></i>
+                <div class="employee-feature">
+                    <i class="fa fa-calendar-check-o"></i>
+                    <div>
+                        <h5>Attendance Tracking</h5>
+                        <p>Maintain monthly attendance, leaves, overtime, and working days.</p>
                     </div>
                 </div>
 
-                <!-- CONTENT -->
-                <div class="col-md-6">
-                    <h4 class="optimize-heading">Stock Management</h4>
-                    <ul class="optimize-list">
-                        <li>Stock Ledger</li>
-                        <li>Stock valuation on multiple methods</li>
-                        <li>Daily / Monthly summaries of items & item groups</li>
-                    </ul>
-                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
-                    book free trial
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- BLOCK 3 : BILLING & INVOICING -->
-    <div class="optimize-block bg-soft">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- ICON -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <div class="optimize-icon">
-                        <i class="fa fa-file-text-o"></i>
+                <div class="employee-feature">
+                    <i class="fa fa-money"></i>
+                    <div>
+                        <h5>Payroll Processing</h5>
+                        <p>Auto salary calculation with allowances, deductions, and net pay.</p>
                     </div>
                 </div>
 
-                <!-- CONTENT -->
-                <div class="col-md-6">
-                    <h4 class="optimize-heading">Billing & Invoicing</h4>
-                    <ul class="optimize-list">
-                        <li>Multiple taxes in single invoice</li>
-                        <li>Tax inclusive / MRP billing</li>
-                        <li>Voucher cancellation</li>
-                        <li>Multiple voucher series for each voucher type</li>
-                    </ul>
-                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
-                        book free trial
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- BLOCK 4 : GST REPORTS -->
-    <div class="optimize-block">
-        <div class="container">
-            <div class="row align-items-center flex-md-row-reverse">
-
-                <!-- ICON -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <div class="optimize-icon">
-                        <i class="fa fa-balance-scale"></i>
+                <div class="employee-feature">
+                    <i class="fa fa-file-text"></i>
+                    <div>
+                        <h5>Payslip Generation</h5>
+                        <p>Generate professional payslips for each employee instantly.</p>
                     </div>
                 </div>
 
-                <!-- CONTENT -->
-                <div class="col-md-6">
-                    <h4 class="optimize-heading">GST Reports</h4>
-                    <ul class="optimize-list">
-                        <li>GST Summary</li>
-                        <li>GST Registers</li>
-                        <li>Party / Item wise GST summary</li>
-                        <li>Bill-wise ITC reversal</li>
-                    </ul>
-                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
-                        book free trial
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- BLOCK 5 : UTILITIES -->
-    <div class="optimize-block bg-soft">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- ICON -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <div class="optimize-icon">
-                        <i class="fa fa-wrench"></i>
+                <div class="employee-feature">
+                    <i class="fa fa-balance-scale"></i>
+                    <div>
+                        <h5>PF / ESI Compliance</h5>
+                        <p>Stay compliant with PF, ESI, and other statutory requirements.</p>
                     </div>
                 </div>
 
-                <!-- CONTENT -->
-                <div class="col-md-6">
-                    <h4 class="optimize-heading">Utilities</h4>
-                    <ul class="optimize-list">
-                        <li>Pop-up calculator</li>
-                        <li>Year-wise data backup & restore</li>
-                        <li>Price list printing</li>
-                        <li>Voucher duplication</li>
-                    </ul>
-                    <a href="{{ url('/freetrial') }}" class="btn optimize-btn">
-                        book free trial 
-                    </a>
-                </div>
+                <a href="{{ url('/freetrial') }}" class="btn employee-btn mt-3">
+                    Book Free Trial
+                </a>
 
             </div>
-        </div>
-    </div>
 
+            <!-- RIGHT : INFO CARD -->
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="employee-card">
+
+                    <h4 class="mb-3">
+                        Why Use {{ $softwarecompinfo->software_firm_name }} for Payroll?
+                    </h4>
+
+                    <ul class="employee-list">
+                        <li>✔ Accurate & automated salary calculations</li>
+                        <li>✔ Saves time & reduces manual errors</li>
+                        <li>✔ Easy employee record maintenance</li>
+                        <li>✔ Secure & audit-ready payroll reports</li>
+                        <li>✔ Ideal for SMEs & growing businesses</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 <!-- ================= BUSY – AN ACCOUNTING SOLUTION FOR EVERYONE ================= -->

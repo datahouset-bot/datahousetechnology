@@ -1082,6 +1082,158 @@
 
             </div>
         </section>
+        <!-- ================= PRICING CARDS SECTION ================= -->
+<section class="pricing-section">
+    <div class="pricing-container">
+
+        <!-- Title -->
+        <div class="text-center mb-5">
+            <h2 class="pricing-title">Simple & Transparent Pricing</h2>
+            <p class="text-muted">
+                Choose a plan that fits your business needs
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <!-- BASIC PLAN -->
+            <div class="col-md-4 mb-4">
+                <div class="pricing-card h-100">
+                    <div class="pricing-left">
+                        <div class="pricing-icon">
+                            <i class="fa fa-leaf"></i>
+                        </div>
+                        <div class="pricing-label">BUSY CLOUD</div>
+                    </div>
+
+                    <div class="pricing-right">
+                        <h5>Includes</h5>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Accounting & Billing</li>
+                            <li><i class="fa fa-check"></i> Cloud Storage</li>
+                            <li><i class="fa fa-check"></i> Multiple User Access</li>
+                            <li><i class="fa fa-check"></i> Email Support</li>
+                        </ul>
+                        <a href="{{ url('https://busy.in/pricing/') }}" class="btn btn-primary btn-block mt-3">
+                            View PRICE Lists
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STANDARD PLAN -->
+            <div class="col-md-4 mb-4">
+                <div class="pricing-card h-100 border border-primary">
+                    <div class="pricing-left">
+                        <div class="pricing-icon">
+                            <i class="fa fa-rocket"></i>
+                        </div>
+                        <div class="pricing-label">MARG</div>
+                        <div class="price">₹6000 <span>/year</span></div>
+                        <p class="tax-note">+ GST applicable</p>
+                    </div>
+
+                    <div class="pricing-right">
+                        <h5>Includes</h5>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Everything in Basic</li>
+                            <li><i class="fa fa-check"></i> Inventory Management</li>
+                            <li><i class="fa fa-check"></i> Multi-User Access</li>
+                            <li><i class="fa fa-check"></i> Priority Support</li>
+                        </ul>
+                        <a href="{{ url('https://margcompusoft.com/marg-price-list.html') }}" class="btn btn-primary btn-block mt-3">
+                            View PRICE Lists
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREMIUM PLAN -->
+            <div class="col-md-4 mb-4">
+                <div class="pricing-card h-100">
+                    <div class="pricing-left">
+                        <div class="pricing-icon">
+                            <i class="fa fa-diamond"></i>
+                        </div>
+                        <div class="pricing-label">Speed plus</div>
+                        <div class="price">₹8000 <span>/Year</span></div>
+                        <p class="tax-note">+ GST applicable</p>
+                    </div>
+
+                    <div class="pricing-right">
+                        <h5>Includes</h5>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Everything in Standard</li>
+                            <li><i class="fa fa-check"></i> Multi-Location Business</li>
+                            <li><i class="fa fa-check"></i> Cloud Backup & Security</li>
+                            <li><i class="fa fa-check"></i> Dedicated Support</li>
+                        </ul>
+                        <a href="{{ url('/freetrial') }}" class="btn btn-primary btn-block mt-3">
+                            Start Free Trial
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <!-- PREMIUM PLAN -->
+            <div class="col-md-4 mb-4">
+                <div class="pricing-card h-100">
+                    <div class="pricing-left">
+                        <div class="pricing-icon">
+                            <i class="fa fa-diamond"></i>
+                        </div>
+                        <div class="pricing-label">Tally</div>
+                        <div class="price">₹4,999 <span>/month</span></div>
+                        <p class="tax-note">+ GST applicable</p>
+                    </div>
+
+                    <div class="pricing-right">
+                        <h5>Includes</h5>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Everything in Standard</li>
+                            <li><i class="fa fa-check"></i> Multi-Location Business</li>
+                            <li><i class="fa fa-check"></i> Cloud Backup & Security</li>
+                            <li><i class="fa fa-check"></i> Dedicated Support</li>
+                        </ul>
+                        <a href="{{ url('/freetrial') }}" class="btn btn-primary btn-block mt-3">
+                            Start Free Trial
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <!-- PREMIUM PLAN -->
+            <div class="col-md-4 mb-4">
+                <div class="pricing-card h-100">
+                    <div class="pricing-left">
+                        <div class="pricing-icon">
+                            <i class="fa fa-diamond"></i>
+                        </div>
+                        <div class="pricing-label">Cloud</div>
+                        <div class="price">₹4,999 <span>/month</span></div>
+                        <p class="tax-note">+ GST applicable</p>
+                    </div>
+
+                    <div class="pricing-right">
+                        <h5>Includes</h5>
+                        <ul>
+                            <li><i class="fa fa-check"></i> Everything in Standard</li>
+                            <li><i class="fa fa-check"></i> Multi-Location Business</li>
+                            <li><i class="fa fa-check"></i> Cloud Backup & Security</li>
+                            <li><i class="fa fa-check"></i> Dedicated Support</li>
+                        </ul>
+                        <a href="{{ url('/freetrial') }}" class="btn btn-primary btn-block mt-3">
+                            Start Free Trial
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 
       
 <!-- ================= INFRA & SERVICES SECTION ================= -->

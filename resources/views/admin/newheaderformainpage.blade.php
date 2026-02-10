@@ -6,6 +6,122 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Data House Technology</title>
     <style>
+        /* ================= RESPONSIVE HEADER FIX ================= */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Navbar base fix */
+.busy-header .container {
+    flex-wrap: wrap;
+}
+
+/* Mobile navbar toggle */
+.navbar-toggler {
+    border: none;
+    font-size: 22px;
+}
+
+/* Mobile menu */
+@media (max-width: 991px) {
+
+    /* Stack header content */
+    .busy-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* Logo center */
+    .busy-logo {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Nav full width */
+    .busy-nav {
+        width: 100%;
+    }
+
+    /* Nav items stacked */
+    .busy-nav .navbar-nav {
+        width: 100%;
+        background: #062f52;
+        padding: 10px 0;
+        border-radius: 8px;
+    }
+
+    .busy-nav .nav-link {
+        color: #ffffff !important;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .busy-nav .nav-link:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    /* Disable hover mega menu */
+    .mega-dropdown:hover .mega-menu {
+        display: none;
+    }
+
+    /* Mega menu mobile style */
+    .mega-menu {
+        position: static;
+        background: #073b67;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    .mega-menu .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mega-title {
+        font-size: 14px;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* Actions stack */
+    .busy-actions {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Support icon center */
+    .busy-support {
+        margin: 10px auto 0;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 575px) {
+
+    .busy-strip {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .busy-logo span {
+        font-size: 16px;
+    }
+
+    .busy-logo small {
+        font-size: 12px;
+    }
+
+    .busy-trial-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
             /* ===== BUSY HEADER STYLE ===== */
 
         .busy-strip {
@@ -191,7 +307,7 @@
 
             <!-- LOGO -->
             <div class="busy-logo">
-                <img src="{{ global_asset('front_assets/images/logo.png') }}" alt="Logo"
+                <img src="{{$pic->logo}}" alt="Logo"
                     onerror="this.style.display='none'">
                 <span>
                     {{ $softwarecompinfo->software_firm_name ?? 'BUSY ERP' }}
@@ -201,6 +317,10 @@
 
             <!-- NAVIGATION -->
          <nav class="busy-nav navbar navbar-expand-lg">
+            <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#busyMenu">
+    <i class="fa fa-bars"></i>
+</button>
+<div class="collapse navbar-collapse" id="busyMenu">
     <ul class="navbar-nav">
 
         <!-- ACCOUNTING SOFTWARE MEGA DROPDOWN -->
@@ -254,6 +374,7 @@
                 
             </div>
         </li>
+        </ul></div>
 <li class="nav-item dropdown mega-dropdown">
     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
         GST

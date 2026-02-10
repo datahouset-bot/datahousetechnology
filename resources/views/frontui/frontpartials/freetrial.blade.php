@@ -365,7 +365,11 @@
                         <h1 class="busy-title">
                             {{ $softwarecompinfo->software_firm_name }} Online –
                             <br>
-                            <span>Run Your Business Anytime, Anywhere</span>
+                            <span>Run Your Business Anytime, 
+                                 <a href="https://drive.google.com/file/d/1UUPmKUF65G6aYCW970x4yL5I-DyWkwOA/view">
+                 Anywhere
+            </a>
+                            </span>
                         </h1>
 
                         <p class="busy-subtitle">
@@ -389,7 +393,7 @@
     <div class="demo-card-new">
 
         <h4 class="text-center mb-4 fw-bold">
-            {{ $softwarecompinfo->software_firm_name }} Software Download – 15 Days Free Trial
+            {{ $softwarecompinfo->software_firm_name }} Software Download – 7 Days Free Trial
         </h4>
 
         <form>
@@ -446,11 +450,7 @@
 
         <!-- ACTION BUTTONS -->
         <div class="installation-actions">
-            <a href="https://drive.google.com/file/d/1UUPmKUF65G6aYCW970x4yL5I-DyWkwOA/view"
-               class="btn btn-primary">
-                <i class="fa fa-download"></i> Download Software
-            </a>
-
+        
             <a href="#" class="btn btn-secondary">
                 <i class="fa fa-database"></i> Download Demo Data
             </a>

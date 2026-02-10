@@ -730,7 +730,7 @@
 
                 <!-- CTA -->
                 <div class="text-center mt-5">
-                    <a href="https://drive.google.com/file/d/1UUPmKUF65G6aYCW970x4yL5I-DyWkwOA/view?usp=sharing" class="btn btn-danger px-4 py-2">
+                    <a href="{{ url('/freetrial') }}" class="btn btn-danger px-4 py-2">
                      Download Speed Plus Software 
                     </a>
                 </div>
